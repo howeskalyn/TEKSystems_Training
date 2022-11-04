@@ -1,0 +1,78 @@
+id,name,deptId
+1,"Accounting & Finance",2
+2,"Aeronautical & Manufacturing Engineering",4
+3,"Agriculture & Forestry",7
+4,"American Studies",3
+5,"Anatomy & Physiology",6
+6,Anthropology,7
+7,Archaeology,7
+8,Architecture,4
+9,"Art & Design",1
+10,"Aural & Oral Sciences",7
+11,"Biological Sciences",7
+12,Building,4
+13,"Business & Management Studies",2
+14,"Celtic Studies",3
+15,"Chemical Engineering",4
+16,Chemistry,7
+17,"Civil Engineering",4
+18,"Classics & Ancient History",3
+19,"Communication & Media Studies",2
+20,"Complementary Medicine",6
+21,"Computer Science",5
+22,Counselling,6
+23,"Creative Writing",1
+24,Criminology,7
+25,Dentistry,6
+26,"Drama, Dance & Cinematics",1
+27,"East & South Asian Studies",3
+28,Economics,2
+29,Education,8
+30,"Electrical & Electronic Engineering",4
+31,English,3
+32,Fashion,1
+33,"Film Making",1
+34,"Food Science",7
+35,"Forensic Science",7
+36,French,3
+37,"Geography & Environmental Sciences",7
+38,Geology,7
+39,"General Engineering",4
+40,German,3
+41,History,3
+42,"History of Art, Architecture & Design",1
+43,"Hospitality, Leisure, Recreation & Tourism",2
+44,"Iberian Languages/Hispanic Studies",3
+45,Italian,3
+46,"Land & Property Management",2
+47,Law,2
+48,"Librarianship & Information Management",5
+49,Linguistics,3
+50,Marketing,2
+51,"Materials Technology",4
+52,Mathematics,7
+53,"Mechanical Engineering",4
+54,"Medical Technology",6
+55,Medicine,6
+56,"Middle Eastern & African Studies",3
+57,Music,1
+58,Nursing,6
+59,"Occupational Therapy",6
+60,"Optometry, Ophthalmology & Orthoptics",6
+61,"Pharmacology & Pharmacy",6
+62,Philosophy,3
+63,"Physics and Astronomy",7
+64,Physiotherapy,6
+65,Politics,3
+66,Psychology,6
+67,Robotics,5
+68,"Russian & East European Languages",3
+69,"Social Policy",8
+70,"Social Work",8
+71,Sociology,8
+72,"Sports Science",6
+73,"Theology & Religious Studies",3
+74,"Veterinary Medicine",6
+75,"Youth Work",8
+76,"Cyber Security",5
+100,"new course name",1

@@ -1,0 +1,70 @@
+/* classes begin with a dot */
+.humble-box {
+    margin: 40px;
+    padding: 20px;
+    border: 3px solid #CCC;
+}
+
+  .border-box {
+    border: 2px;
+    border-top: 25px;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 20px;
+    padding-bottom: 10px;
+    margin: 15px;
+    background-color: rgb(189, 214, 251);
+  }
+
+  .color-box {
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(199, 194, 161);
+    padding: 10px;
+    width: 400px;
+    background-color: rgb(243, 241, 220);
+    font-size: 15px;
+    color: rgb(0, 178, 158);
+    /* margin: 30px 10px 20px 0px;
+    padding: 20px 0px 20px 10px;
+    border: 5px solid #C7C2A1;
+    width: 500px;
+    background-color: #F3F1DC;
+    font-size: 30px;
+    color: #00B29E; */
+  }
+
+  .picture-box {
+    border: 10px;
+    border-style: ridge;
+    border-color: rgba(146, 137, 228, 0.718);
+    width: 317px;
+    height: 158px;
+  }
+
+  /* globally stylize html elements */
+  h1 {
+    color: rgb(124, 71, 181);
+  }
+
+  p {
+    color:rgb(0, 178, 158)
+  }
+
+  /* any paragraph within style "border-box" will be black */
+  .border-box>p {
+    color: black;
+  }
+
+  /* pound sign targets an id 
+   #anything {
+    background-color: orange;
+  } */
+
+  h3:hover {
+    background-color: rgb(134, 217, 238);
+    cursor: pointer;
+    width: 125px;
+  }
+
+

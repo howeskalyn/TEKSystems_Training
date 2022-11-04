@@ -1,0 +1,4 @@
+File(File parent, String child) : Creates a new File instance from a parent abstract pathname and a child pathname string.
+File(String pathname) : Creates a new File instance by converting the given pathname string into an abstract pathname.
+File(String parent, String child) : Creates a new File instance from a parent pathname string and a child pathname string.
+File(URI uri) : Creates a new File instance by converting the given file: URI into an abstract pathname.
