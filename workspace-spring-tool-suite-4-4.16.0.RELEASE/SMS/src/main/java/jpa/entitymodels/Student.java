@@ -1,18 +1,25 @@
 package jpa.entitymodels;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import java.util.ArrayList;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
+import java.util.ArrayList;
 
 @Getter
 @Setter
@@ -33,14 +40,20 @@ public class Student {
 	@Column(name = "password")
 	private String sPass;
 	
-	
-	// all the courses that a student has registered for - why is this necessary?
-	// private List<Course> sCourses;
-
 	// a single student can have many student courses - is this not working cause its joining on the primary key?
-//	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-//	@JoinColumn(name = "email", nullable = false, insertable = false, updatable = false)
-//	private Student_Course studentCourses;
+	//	@ManyToOne(fetch = FetchType.EAGER, optional = false)
+	//	@JoinColumn(name = "email", nullable = false, insertable = false, updatable = false)
+	//	private Student_Course studentCourses;
+	
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    @JoinTable(name = "Student_Course",
+            joinColumns = {
+                    @JoinColumn(name = "studentId", referencedColumnName = "email",
+                            nullable = false, updatable = false)},
+            inverseJoinColumns = {
+                    @JoinColumn(name = "courseId", referencedColumnName = "id",
+                            nullable = false, updatable = false)})
+    private List<Course> sCourses = new ArrayList<Course>(); // all the courses that a student has registered for
 
 	@Override
 	public int hashCode() {

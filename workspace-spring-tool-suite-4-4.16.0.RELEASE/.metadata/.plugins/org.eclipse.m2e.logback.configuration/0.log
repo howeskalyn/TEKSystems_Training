@@ -6572,3 +6572,128 @@ org.eclipse.core.runtime.CoreException: Launch configuration App references clos
 2022-11-04 11:30:59,915 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/school-database/src/main/resources
 2022-11-04 11:30:59,920 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-11-04 11:30:59,920 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/school-database/src/test/resources
+2022-11-04 16:00:50,666 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:00:50,668 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:00:50,671 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:00:50,673 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-04 16:01:21,572 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:01:21,572 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:01:21,574 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:01:21,574 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-04 16:05:04,814 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:05:04,815 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:05:04,822 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:05:04,822 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-04 16:05:45,701 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:05:45,702 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:05:45,705 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:05:45,705 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-04 16:05:50,864 [Worker-25: Launching App (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:05:50,864 [Worker-25: Launching App (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:05:50,873 [Worker-25: Launching App (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:05:50,874 [Worker-25: Launching App (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-04 16:10:11,757 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:10:11,759 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:10:11,763 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:10:11,763 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-04 16:11:36,219 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:11:36,220 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:11:36,224 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:11:36,224 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-04 16:13:56,142 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:13:56,153 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:13:56,156 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:13:56,157 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-04 16:14:44,443 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:14:44,443 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:14:44,447 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:14:44,447 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-04 16:18:59,118 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:18:59,119 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-04 16:18:59,121 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-04 16:18:59,121 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:14:52,230 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:14:52,236 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:14:52,239 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:14:52,239 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:15:36,269 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:15:36,269 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:15:36,271 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:15:36,271 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:33:33,687 [Worker-45: Launching App (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:33:33,687 [Worker-45: Launching App (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:33:33,699 [Worker-45: Launching App (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:33:33,699 [Worker-45: Launching App (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:33:43,404 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:33:43,405 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:33:43,406 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:33:43,406 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:53:40,599 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:53:40,654 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:53:40,705 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:53:40,705 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:53:47,122 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:53:47,123 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:53:47,125 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:53:47,125 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:53:50,211 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:53:50,212 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:53:50,215 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:53:50,215 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:53:55,090 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:53:55,091 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:53:55,094 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:53:55,095 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:54:13,824 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:54:13,824 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:54:13,826 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:54:13,826 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:55:27,677 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:55:27,678 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:55:27,680 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:55:27,680 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:56:17,747 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:56:17,748 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:56:17,750 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:56:17,750 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:56:23,773 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:56:23,773 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:56:23,776 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:56:23,776 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:56:29,095 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:56:29,095 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:56:29,097 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:56:29,097 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:59:21,739 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:59:21,743 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:59:21,754 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:59:21,754 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 20:59:28,384 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:59:28,385 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 20:59:28,387 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 20:59:28,388 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 21:00:29,764 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 21:00:29,765 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 21:00:29,768 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 21:00:29,768 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 21:00:34,147 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 21:00:34,147 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 21:00:34,149 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 21:00:34,149 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 21:05:42,126 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 21:05:42,129 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/main/resources
+2022-11-06 21:05:42,132 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-11-06 21:05:42,132 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/src/test/resources
+2022-11-06 21:06:49,335 [Worker-57: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sba:SMS:0.0.1-SNAPSHOT @ /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/pom.xml.
+2022-11-06 21:06:52,325 [Worker-54: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sba:SMS:0.0.1-SNAPSHOT @ /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/pom.xml.
+2022-11-07 09:54:53,392 [Worker-110: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sba:SMS:0.0.1-SNAPSHOT @ /Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/SMS/pom.xml.
+2022-11-07 09:54:54,744 [AetherRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.13.0/log4j-api-2.13.0.jar
+2022-11-07 09:54:56,483 [AetherRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-core/2.13.0/log4j-core-2.13.0.jar
+2022-11-07 09:55:00,737 [AetherRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.13.0/log4j-api-2.13.0.jar
+2022-11-07 09:55:40,717 [AetherRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-core/2.13.0/log4j-core-2.13.0.jar
+2022-11-07 09:55:42,722 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.13.0/log4j-api-2.13.0-sources.jar
+2022-11-07 09:55:48,502 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.13.0/log4j-api-2.13.0-sources.jar
+2022-11-07 09:55:48,505 [Worker-116: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.logging.log4j:log4j-api:2.13.0
+2022-11-07 09:55:48,750 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-core/2.13.0/log4j-core-2.13.0-sources.jar
+2022-11-07 09:56:18,062 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-core/2.13.0/log4j-core-2.13.0-sources.jar
+2022-11-07 09:56:18,067 [Worker-116: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.logging.log4j:log4j-core:2.13.0

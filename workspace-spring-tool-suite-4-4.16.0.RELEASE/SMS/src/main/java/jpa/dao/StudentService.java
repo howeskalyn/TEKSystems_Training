@@ -9,7 +9,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import jpa.entitymodels.Course;
 import jpa.entitymodels.Student;
+import jpa.entitymodels.Student_Course;
 
 public class StudentService {
 
@@ -38,8 +40,7 @@ public class StudentService {
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
 
-		// must use JAVA VARIABLE names in the hql - hence why we need s.sEmail instead
-		// of email
+		// must use JAVA VARIABLE names in the hql - hence why we need s.sEmail instead of email
 		String hql = "FROM Student s where s.sEmail =: studentEmail";
 		TypedQuery<Student> query = session.createQuery(hql, Student.class);
 		query.setParameter("studentEmail", sEmail);
@@ -75,7 +76,47 @@ public class StudentService {
 	// if the Student is NOT attending that Course, register the student for that course
 	public void registerStudentToCourse(String sEmail, int cId) {
 		
-		// pull Student_Course by courseId & if studentId == email they're already attending
+		// pull Student_Course by courseId
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		Transaction tx = session.beginTransaction();
 
+		String hql = "FROM Student_Course sc where sc.courseId =: id";
+		TypedQuery<Student_Course> query = session.createQuery(hql, Student_Course.class);
+		query.setParameter("id", cId);
+
+		Student_Course studentCourse = query.getSingleResult();
+		
+		// if studentId == email they're already attending
+		if (studentCourse.getStudentId().equals(sEmail)) {
+			System.out.println("Student is already attending this course.");
+			
+		// register the student for the course -> insert into Student_Course
+		} else {
+			System.out.println("Registering the student for the course.");
+			Integer addedId = 100 + studentCourse.getId(); // to ensure nothing gets written over
+
+			Student_Course newStudentCourse = new Student_Course();
+			newStudentCourse.setId(addedId);
+			newStudentCourse.setCourseId(cId);
+			newStudentCourse.setStudentId(sEmail);
+			
+			session.save(newStudentCourse);
+		}
+		
+		tx.commit();
+		factory.close();
+		session.close();
 	}
+	
+	// takes a Student’s Email as a parameter and finds all the courses the student is registered for
+	public List<Course> getStudentCourses(String sEmail) {
+		
+		Student s = getStudentByEmail(sEmail);
+		List<Course> courses = s.getSCourses();
+
+		return courses;
+		
+	}
+	
 }

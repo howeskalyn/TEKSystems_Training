@@ -45,6 +45,7 @@ public class Student_Course {
 //	@EqualsAndHashCode.Exclude
 //	@ToString.Exclude
 //	private List<Course> courses;
+	
 
 	@Override
 	public int hashCode() {
@@ -82,7 +83,5 @@ public class Student_Course {
 			return false;
 		return true;
 	}
-
-	
 	
 }
