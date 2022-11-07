@@ -4,9 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -34,12 +32,7 @@ public class Course {
 	@Column(name = "instructor")
 	private String cInstructorName;
 	
-	// a single course can have many student courses
-	//	@ManyToOne(fetch = FetchType.EAGER, optional = false)
-	//	@JoinColumn(name = "id", nullable = false, insertable = false, updatable = false)
-	//	private Student_Course studentCourses;
-	
-	 @ManyToMany(mappedBy = "sCourses", fetch = FetchType.EAGER)
+	@ManyToMany(mappedBy = "sCourses", fetch = FetchType.EAGER)
 	    private List<Student> students; 
 
 	@Override
@@ -81,11 +74,8 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return cId + ": " + cName + " (" + cInstructorName + ")";
+		return cId + ": " + cName + " (" + cInstructorName + ")";		
 		//return "Course [cId=" + cId + ", cName=" + cName + ", cInstructorName=" + cInstructorName + "]";
 	}
 	
-	
-	
-
 }

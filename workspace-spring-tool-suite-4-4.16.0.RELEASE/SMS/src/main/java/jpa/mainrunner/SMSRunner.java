@@ -6,7 +6,6 @@ import java.util.Scanner;
 import jpa.dao.CourseService;
 import jpa.dao.StudentService;
 import jpa.entitymodels.Course;
-import jpa.entitymodels.Student;
 
 /*
  * displays and prompts the user to select one of the following options:
@@ -40,6 +39,10 @@ public class SMSRunner {
 	private static StudentService ss = new StudentService();
 	private static CourseService cs = new CourseService();
 	private static Scanner sc = new Scanner(System.in);
+	
+	// for colored output to console
+	public static final String ANSI_RED = "\u001B[31m"; 
+	public static final String ANSI_RESET = "\u001B[0m";
 
 	public static void main(String[] args) {
 
@@ -51,30 +54,35 @@ public class SMSRunner {
 
 			switch (choice) {
 			case 1: // if the first option is selected, get credentials & send to log in
-				
-				String[] info = getLoginInfo(); // holds email in 0 index and password in 1
-				if (ss.validateStudent(info[0], info[1])) {
-					
-					boolean cont = true;
-					while (cont) {
-						printCurrentCourses(info[0]);
-						cont = studentLoginScreen(info[0]);
+
+				try {
+					String[] info = getLoginInfo(); // holds email in 0 index and password in 1
+					if (ss.validateStudent(info[0], info[1])) {
+
+						boolean cont = true;
+						while (cont) {
+							printCurrentCourses(info[0]);
+							cont = studentLoginScreen(info[0]);
+						}
+					} else {
+						System.out.println(ANSI_RED + "The password you entered was incorrect!" + ANSI_RESET);
+						//systemOn = false;
 					}
-				} else {
-					System.out.println("\n--- !Invalid Credentials! ---\nSystem quitting...");
-					systemOn = false;
+
+				} catch (Exception e) {
+					System.out.println(ANSI_RED + "Student email was not found." + ANSI_RESET);
 				}
-				
+
 				break;
 			case 2: // otherwise, quit
-				System.out.println("System quitting...");
+				System.out.println(ANSI_RED + "System quitting..." + ANSI_RESET);
 				systemOn = false;
 				break;
 			}
 		}
 
 	}
-	
+
 	// ----- HELPER METHODS -----
 
 	// displays the main menu & gathers input from user
@@ -86,21 +94,21 @@ public class SMSRunner {
 		try {
 			input = sc.nextInt();
 			if (input < 0 || input > 2) {
-				System.out.println("Please enter either number 1 or 2.\n");
+				System.out.println(ANSI_RED + "Please enter either number 1 or 2.\n" + ANSI_RESET);
 			}
 		} catch (Exception e) {
-			System.out.println("Please enter either number 1 or 2.\n");
+			System.out.println(ANSI_RED + "Please enter either number 1 or 2.\n" + ANSI_RESET);
 		}
 
 		return input;
 
 	}
-	
+
 	// takes in user login info
 	public static String[] getLoginInfo() {
 		String[] info = new String[2];
 
-		System.out.print("Enter email: ");
+		System.out.print("\nEnter email: ");
 		String email = sc.nextLine();
 		System.out.print("Enter password: ");
 		String password = sc.nextLine();
@@ -112,17 +120,17 @@ public class SMSRunner {
 
 	// prints a students current courses by using their email
 	public static void printCurrentCourses(String email) {
-		List<Course> currentCourses = ss.getStudentCourses(email); 
+		List<Course> currentCourses = ss.getStudentCourses(email);
 		System.out.println("\n--- Courses for " + email + " ---");
 		for (Course c : currentCourses) {
 			System.out.println(c.toString());
 		}
 	}
-	
+
 	// displays the student login screen and options & gathers input
 	public static boolean studentLoginScreen(String email) {
 		boolean cont = true;
-		
+
 		System.out.println("\n- Select from the Following -");
 		System.out.println("1) Register for a Class\n2) Logout");
 		System.out.print("Choose an option: ");
@@ -130,42 +138,42 @@ public class SMSRunner {
 		try {
 			input = sc.nextInt();
 		} catch (Exception e) {
-			System.out.println("Please enter either number 1 or 2.\n");
+			System.out.println(ANSI_RED + "Please enter either number 1 or 2.\n" + ANSI_RESET);
 		}
-		
+
 		switch (input) {
 		case 1: // sends to register for a class
 			registerForClass(email);
 			break;
 		case 2: // logout and return to main menu
-			System.out.println("Logging you out...");
+			System.out.println(ANSI_RED + "Logging you out..." + ANSI_RESET);
 			cont = false;
 			break;
 		}
-		
+
 		return cont;
-		
+
 	}
-	
-	// prints all courses, takes in input & registers the student for the course 
+
+	// prints all courses, takes in input & registers the student for the course
 	public static void registerForClass(String email) {
 		// display all possible courses in database
-		List <Course> allCourses = cs.getAllCourses();
+		List<Course> allCourses = cs.getAllCourses();
 		System.out.println("\n--- All Possible Courses ---");
 		for (Course c : allCourses) {
 			System.out.println(c.toString());
 		}
-		
+
 		// select course to register for, using id
 		System.out.print("\nSelect a Course ID: ");
 		int courseSelection = 0;
 		try {
 			courseSelection = sc.nextInt();
 		} catch (Exception e) {
-			System.out.println("Please enter a valid Course ID.\n");
+			System.out.println(ANSI_RED + "Please enter a valid Course ID.\n" + ANSI_RESET);
 		}
-		
+
 		ss.registerStudentToCourse(email, courseSelection);
 	}
-	
+
 }

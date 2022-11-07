@@ -14,6 +14,11 @@ import jpa.entitymodels.Student;
 import jpa.entitymodels.Student_Course;
 
 public class StudentService {
+	
+	// for colored output to console
+	public static final String ANSI_RED = "\u001B[31m"; 
+	public static final String ANSI_RESET = "\u001B[0m";
+	public static final String ANSI_GREEN = "\u001B[32m";
 
 	// reads Student table and returns the data as a List<Student>
 	public List<Student> getAllStudents() {
@@ -36,21 +41,28 @@ public class StudentService {
 	// takes a Student’s email as a String, parses the student list for a Student
 	// with that email, and returns a Student Object
 	public Student getStudentByEmail(String sEmail) {
+		
+		Student result = new Student();
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
+		
+		try {
+			// must use JAVA VARIABLE names in the hql - hence why we need s.sEmail instead of email
+			String hql = "FROM Student s where s.sEmail =: studentEmail";
+			TypedQuery<Student> query = session.createQuery(hql, Student.class);
+			query.setParameter("studentEmail", sEmail);
+	
+			result = query.getSingleResult();
 
-		// must use JAVA VARIABLE names in the hql - hence why we need s.sEmail instead of email
-		String hql = "FROM Student s where s.sEmail =: studentEmail";
-		TypedQuery<Student> query = session.createQuery(hql, Student.class);
-		query.setParameter("studentEmail", sEmail);
-
-		Student result = query.getSingleResult();
-
+		} catch (Exception e) {
+			//System.out.println("Student email was not found.");
+		}
+		
 		tx.commit();
 		factory.close();
 		session.close();
-
+		
 		return result;
 
 	}
@@ -75,55 +87,48 @@ public class StudentService {
 	// to find if a Student with that Email is currently attending a Course with that ID
 	// if the Student is NOT attending that Course, register the student for that course
 	public void registerStudentToCourse(String sEmail, int cId) {
-	
+
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
-//
-//		String hql = "FROM Student_Course sc where sc.courseId =: id";
-//		TypedQuery<Student_Course> query = session.createQuery(hql, Student_Course.class);
-//		query.setParameter("id", cId);
-//
-//		Student_Course studentCourse = query.getSingleResult();
-		
+
 		List<Course> currentCourses = getStudentCourses(sEmail); // pull current courses
 		boolean found = false;
 		// search for input course id
 		for (int i = 0; i < currentCourses.size(); i++) {
-			
+
 			if (currentCourses.get(i).getCId() == cId) { // if found
 				found = true;
 			}
 		}
-		
+
 		if (found) {
-			System.out.println("Student is already attending this course.");
-			
-		// register the student for the course -> insert into Student_Course
+			System.out.println(ANSI_RED + "Student is already attending this course." + ANSI_RESET);
+
+			// register the student for the course -> insert into Student_Course
 		} else {
-			System.out.println("Registering student " + sEmail + " for the course with ID: " + cId);
+			System.out.println(ANSI_GREEN + "Registering student " + sEmail + " for the course with ID: " + cId + ANSI_RESET);
 
 			Student_Course newStudentCourse = new Student_Course();
 			newStudentCourse.setCourseId(cId);
 			newStudentCourse.setStudentId(sEmail);
-			
+
 			session.save(newStudentCourse);
 		}
-		
+
 		tx.commit();
 		factory.close();
 		session.close();
 	}
 
-	
 	// takes a Student’s Email as a parameter and finds all the courses the student is registered for
 	public List<Course> getStudentCourses(String sEmail) {
-		
+
 		Student s = getStudentByEmail(sEmail);
 		List<Course> courses = s.getSCourses();
 
 		return courses;
-		
+
 	}
-	
+
 }
