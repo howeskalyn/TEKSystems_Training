@@ -75,29 +75,35 @@ public class StudentService {
 	// to find if a Student with that Email is currently attending a Course with that ID
 	// if the Student is NOT attending that Course, register the student for that course
 	public void registerStudentToCourse(String sEmail, int cId) {
-		
-		// pull Student_Course by courseId
+	
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
-
-		String hql = "FROM Student_Course sc where sc.courseId =: id";
-		TypedQuery<Student_Course> query = session.createQuery(hql, Student_Course.class);
-		query.setParameter("id", cId);
-
-		Student_Course studentCourse = query.getSingleResult();
+//
+//		String hql = "FROM Student_Course sc where sc.courseId =: id";
+//		TypedQuery<Student_Course> query = session.createQuery(hql, Student_Course.class);
+//		query.setParameter("id", cId);
+//
+//		Student_Course studentCourse = query.getSingleResult();
 		
-		// if studentId == email they're already attending
-		if (studentCourse.getStudentId().equals(sEmail)) {
+		List<Course> currentCourses = getStudentCourses(sEmail); // pull current courses
+		boolean found = false;
+		// search for input course id
+		for (int i = 0; i < currentCourses.size(); i++) {
+			
+			if (currentCourses.get(i).getCId() == cId) { // if found
+				found = true;
+			}
+		}
+		
+		if (found) {
 			System.out.println("Student is already attending this course.");
 			
 		// register the student for the course -> insert into Student_Course
 		} else {
-			System.out.println("Registering the student for the course.");
-			Integer addedId = 100 + studentCourse.getId(); // to ensure nothing gets written over
+			System.out.println("Registering student " + sEmail + " for the course with ID: " + cId);
 
 			Student_Course newStudentCourse = new Student_Course();
-			newStudentCourse.setId(addedId);
 			newStudentCourse.setCourseId(cId);
 			newStudentCourse.setStudentId(sEmail);
 			
@@ -108,6 +114,7 @@ public class StudentService {
 		factory.close();
 		session.close();
 	}
+
 	
 	// takes a Student’s Email as a parameter and finds all the courses the student is registered for
 	public List<Course> getStudentCourses(String sEmail) {
