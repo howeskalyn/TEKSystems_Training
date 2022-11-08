@@ -1,0 +1,28 @@
+package com.sba.SMS;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import jpa.dao.CourseService;
+import jpa.dao.StudentService;
+import jpa.entitymodels.Course;
+
+class validateStudentTest {
+
+	@Test
+	void studentValidationTest() {
+		
+		StudentService ss = new StudentService();
+		
+		Assertions.assertTrue(ss.validateStudent("aiannitti7@is.gd", "TWP4hf5j"));
+		Assertions.assertTrue(ss.validateStudent("test@test.com", "test"));
+		
+		Assertions.assertFalse(ss.validateStudent("test@test.com", "password"));
+	}
+
+}

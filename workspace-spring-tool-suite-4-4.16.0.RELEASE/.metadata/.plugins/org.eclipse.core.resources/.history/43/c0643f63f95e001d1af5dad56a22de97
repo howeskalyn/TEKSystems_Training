@@ -1,0 +1,29 @@
+package com.sba.SMS;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import jpa.dao.StudentService;
+
+class validateStudentTest {
+
+	@Test
+	void studentValidationTest() {
+
+		StudentService ss = new StudentService();
+
+		boolean[] rets = ss.validateStudent("aiannitti7@is.gd", "TWP4hf5j");
+		Assertions.assertEquals(rets[0], true); // email should be found
+		Assertions.assertEquals(rets[1], true); // password should be right
+
+		boolean[] retsFalse = ss.validateStudent("aiannitti7@is.gd", "password");
+		Assertions.assertEquals(retsFalse[0], true); // email should be found
+		Assertions.assertEquals(retsFalse[1], false); // password should be wrong
+		
+		boolean[] rets2 = ss.validateStudent("test", "password");
+		Assertions.assertEquals(rets2[0], false); // email should NOT be found
+		Assertions.assertEquals(rets2[1], false); // password should be wrong
+		
+	}
+
+}

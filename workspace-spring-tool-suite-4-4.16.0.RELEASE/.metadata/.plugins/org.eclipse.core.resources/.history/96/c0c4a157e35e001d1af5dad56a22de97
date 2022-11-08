@@ -1,0 +1,21 @@
+package com.sba.SMS;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import jpa.dao.CourseService;
+import jpa.entitymodels.Course;
+
+class validateStudentTest {
+
+	@Test
+	void studentValidationTest() {
+
+	}
+
+}
