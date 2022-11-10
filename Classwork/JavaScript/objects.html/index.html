@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo 2</title>
+
+    <!-- BootStrap link
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    -->
+
+</head>
+
+<script>
+    let student = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 30,
+        class: {
+            name: "Java developer",
+            time: "Daily"
+        },
+        arr: ["abc", "def", "ghi"]
+    };
+
+    console.log(student);
+    console.log(student.firstName + " = " + student["firstName"]);
+    console.log(student.lastName);
+    console.log(student.class.name);
+    console.log(student.arr[2]);
+
+    student.firstName = "new first name!";
+    student["lastName"] = "new last name!";
+
+    console.log("--- For In Loop ---")
+    for (field in student) {
+        console.log(field + " = " + student[field]);
+    }
+
+    console.log("--- Arrays ---")
+    let a = new Array(10);
+    a[0] = 0;
+    a[1] = "string";
+    a[2] = 1;
+    a.length = 4;
+
+    a.push("last value");
+    a.push("past length (auto resize)");
+    a.pop() // reduces array size automatically
+    console.log(a);
+
+</script>
+
+<body>
+    <h1 style="margin: 20px;">Hello, world!</h1>
+</body>
+
+</html>

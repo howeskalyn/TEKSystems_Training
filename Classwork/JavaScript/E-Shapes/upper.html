@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper</title>
+</head>
+
+<script>
+    /* Write a program upper.html that prints the top-right half of a square, given the
+    side length. */
+
+    let length = prompt("Input side length: ");
+    // let length = 4;
+
+    console.log("Shape:");
+    let s = [];
+    for (let i = 0; i < length; i++) {
+        s.push("*");
+    }
+
+    console.log(s.join(""));
+
+    for (let i = 0; i < length; i++) {
+        s[i] = " ";
+        console.log(s.join(""));
+    }
+
+
+</script>
+
+
+<body>
+
+</body>
+
+</html>

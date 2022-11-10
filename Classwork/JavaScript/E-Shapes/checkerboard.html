@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+</head>
+
+<script>
+    /* Write a program checkerboard.html that asks the user to input width and height and
+    prints a rectangular checkerboard of the requested size using asterisks and spaces
+    (alternating).  */
+    let width = prompt("Input width: ");
+    let height = prompt("Input height: ");
+    // let width = 4;
+    // let height = 3;
+
+    console.log("Shape:");
+    let s = "";
+    let turn = 0;
+    for (let i = 0; i < height; i++) {
+        for (let j = 0; j < width; j++) {
+            if (turn % 2 == 0)
+                s += "* ";
+            else
+                s += " *";
+        }
+        console.log(s + "\n");
+        s = "";
+        turn++;
+    }
+
+</script>
+
+
+<body>
+
+</body>
+
+</html>

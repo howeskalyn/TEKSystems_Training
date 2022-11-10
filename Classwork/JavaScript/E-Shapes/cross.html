@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross</title>
+</head>
+
+<script>
+    /* Write a program cross.html that asks the user to input the shape size, and prints a
+    diagonal cross of that dimension.*/
+    // let size = prompt("Input size: ");
+    let size = 8;
+
+    console.log("Shape:");
+    let l = 1;
+    let r = size;
+    let s = "";
+    for (let i = 0; i < size; i++) {
+        for (let j = 1; j <= size; j++) {
+            if (j === l || j === r) {
+                s += "*";
+            } else {
+                s += " ";
+            }
+        }
+
+        r--;
+        l++;
+        console.log(s);
+        s = ""; //reset
+    }
+
+</script>
+
+<body>
+</body>
+
+</html>
