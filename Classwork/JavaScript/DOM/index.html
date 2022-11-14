@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Title</title>
+</head>
+
+<body>
+
+    <style>
+        .list-item {
+            color: green;
+        }
+
+        .title-bg {
+            background-color: aquamarine;
+        }
+
+        .item-bg {
+            background-color: blanchedalmond;
+        }
+
+        /* make another css class for the page-title-css with a red bg */
+        .page-title-css {
+            background-color: red;
+        }
+    </style>
+
+    <h1 id="page-title">DOM Exercises</h1>
+
+    <ul>
+        <li class="list-item" id="item1">Item 1</li>
+        <li class="list-item" id="item2">Item 2</li>
+        <li class="list-item" id="item3">Item 3</li>
+        <li class="list-item" id="item4">Item 4</li>
+    </ul>
+
+    <form>
+        <input type="text" name="email" id="emailId">
+    </form>
+
+    <script>
+        let unorderedList = document.getElementById("item1").parentElement;
+        console.log(unorderedList.getAttribute("name"));
+        console.log(unorderedList.getAttribute("custom-attr"));
+
+        // add a new node to the unorderedList
+        let newNode = document.createElement('li');
+        newNode.textContent = "Item 5";
+        document.querySelector('ul').appendChild(newNode);
+
+        //  remove the node Item 2
+        document.querySelector('ul').removeChild(document.querySelector('ul').childNodes[1]);
+
+        // add button to form
+        let button = document.createElement("button");
+        button.textContent = "Press here.";
+        button.setAttribute('type', 'button');
+        document.querySelector('form').appendChild(button);
+
+        //  when the button is clicked, console.log(value of email input box)
+        function printEmail() {
+            console.log(document.getElementById('emailId').value)
+        }
+        button.addEventListener('click', printEmail);
+
+        // add another button that when clicked it will add or remove the page-title-css
+        // if page-title-css is present, remove it & if not, add it
+        let button2 = document.createElement('button');
+        button2.textContent = "toggle red background";
+        button2.setAttribute('type', 'button');
+
+        function togglePageTitleCSS() {
+            document.querySelector('h1').classList.toggle("page-title-css");
+        }
+        button2.addEventListener('click', togglePageTitleCSS);
+        document.querySelector('h1').appendChild(button2);
+
+        // console.log(document.title);
+        // document.title = "This is the new title."
+        // console.log(document.title);
+
+        // let title = document.getElementById('page-title');
+        // console.log(title);
+        // console.log(title.innerHTML);
+        // title.innerHTML = title.innerHTML + " added with JS";
+
+        // let items = document.getElementsByClassName('list-item');
+        // for (i in items) {
+        //     console.log(items[i].innerHTML);
+        // }
+
+        // document.getElementById("page-title").classList.add("title-bg");
+        // document.getElementById("item2").classList.add("item-bg");
+
+    </script>
+
+</body>
+
+</html>

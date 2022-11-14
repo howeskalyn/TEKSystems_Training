@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    input {
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+
+    <h1>Form Example</h1>
+
+    <!-- when the form submits:
+    -make sure the phone number only has #s & spaces
+    -make eusre the first & last name fields have a value
+    -put an red error message under -->
+
+    <form name="myForm" onSubmit="mySubmitFunction(event)">
+        First Name <input required type="text" name="firstName" id="firstNameId">
+        <br>
+        Last Name <input required type="text" name="lastName" id="lastNameId">
+        <br>
+        Phone # <input type="tel" name="phone" id="phoneId" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+        <br><br>
+        <button>Submit</button>
+    </form>
+
+    <script>
+
+        function mySubmitFunction(e) {
+            e.preventDefault();
+            console.log("form submitted");
+
+            // let fName = document.getElementById("firstNameId");
+            // if (fName.value == "") {
+            //     fName.classList.add('error-field');
+            // }
+
+            let fn = document.getElementById('firstNameId');
+            console.log(fn.value);
+        }
+
+    </script>
+
+</body>
+
+</html>
