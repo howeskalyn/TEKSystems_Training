@@ -21,7 +21,7 @@ public class IndexController {
 	public ModelAndView slash() {
 		System.out.println("Index controller request");
 		
-		List<Course> courses = courseDAO.findByNameContaining("Art");
+		List<Course> courses = courseDAO.findByNameContainingIgnoreCaseOrderByNameDesc("A");
 		for (Course c: courses) {
 			System.out.println(c.getName());
 		}

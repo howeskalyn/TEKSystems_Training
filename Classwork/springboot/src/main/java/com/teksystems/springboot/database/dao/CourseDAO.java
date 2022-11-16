@@ -14,7 +14,7 @@ public interface CourseDAO extends JpaRepository<Course, Long> {
 	@Query("select c from Course c where c.name = :name")
 	public List<Course> findByCourseName(String name);
 	
-	public List<Course> findByNameContaining(String name);
+	public List<Course> findByNameContainingIgnoreCaseOrderByNameDesc(String name);
 	
 	public Course findByNameAndId(String name, Integer Id);
 	
