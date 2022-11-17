@@ -18,6 +18,7 @@ public interface CourseDAO extends JpaRepository<Course, Long> {
 	
 	public Course findByNameAndId(String name, Integer Id);
 	
+	public List<Course> findByInstructorContainingIgnoreCase(String name);
 	
 
 }

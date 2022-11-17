@@ -25,5 +25,8 @@ public class Course {
 
 	@Column(name = "name")
 	private String name;
+	
+	@Column(name = "instructor")
+	private String instructor;
 
 }

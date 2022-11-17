@@ -24,110 +24,33 @@
 
 <body>
 
-    <nav class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">ShowSeek</a>
+            <img src="Logo_NoWords.png" alt="Logo" style="height: 100px">
+            <h1 style="margin: 5px; font-family: 'Norwester', sans-serif">ShowSeek</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-5 justify-content-end" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Events or artists...">
+                    <button class="btn btn-dark" type="button">Search</button>
+                </form>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
-                <li class=""><a href="#">Events</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
-                <li class=""><a href="#">Artists</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
         </div>
     </nav>
-
-    <!-- <table>
-        <tr>
-            <th style="width: 20%;">
-                <img src="Logo_NoWords.png" alt="Logo" height="125" style="margin-top: 30px; margin-left: 30px">
-            </th>
-            <th>
-                <h1 style="margin-top: 70px; font-family: 'Norwester', sans-serif">ShowSeek</h1>
-            </th>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td>
-                <ul class="nav nav-tabs justify-content-end">
-    
-                    <li class="nav-item ms-5">
-                        <a class="nav-link active" style="color:#BD0727" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color:black" href="#">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color:black" href="#">Artists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color:black" href="#">Friends</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="color:black" href="#">Profile</a>
-                    </li>
-            </td>
-        </tr>
-    </table> -->
-
-    <!-- Navigation Bar -->
-    <!-- <ul class="nav nav-tabs">
-        <a class="navbar-brand" href="#">
-            <img src="Logo_NoWords.png" alt="Logo" height="125" style="margin-top: 30px; margin-left: 30px; margin-bottom: 30px;">
-        </a>
-        <h1 style="margin-top: 70px; margin-left: 10px; font-family: 'Norwester', sans-serif">ShowSeek</h1>
-
-        <li class="nav-item mt-5 ms-5">
-            <a class="nav-link active" style="color:#BD0727" href="#">Home</a>
-        </li>
-        <li class="nav-item mt-5">
-            <a class="nav-link" style="color:black" href="#">Events</a>
-        </li>
-        <li class="nav-item mt-5">
-            <a class="nav-link" style="color:black" href="#">Artists</a>
-        </li>
-        <li class="nav-item mt-5">
-            <a class="nav-link" style="color:black" href="#">Friends</a>
-        </li>
-        <li class="nav-item mt-5">
-            <a class="nav-link" style="color:black" href="#">Profile</a>
-        </li>
-    </ul> -->
-
-    <!-- <div class="m-4">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand">
-                    <img src="Logo_NoWords.png" height="150" alt="CoolBrand">
-                </a>
-                <h1 style="font-family: 'Norwester', sans-serif">ShowSeek</h1>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link active">Home</a>
-                        <a href="#" class="nav-item nav-link">Profile</a>
-                        <a href="#" class="nav-item nav-link">Messages</a>
-                        <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>
-                    </div>
-                    <div class="navbar-nav ms-auto">
-                        <a href="#" class="nav-item nav-link">Login</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div> -->
 
     <!--Header Image -->
     <div class="card m-3 p-3 shadow">
@@ -139,6 +62,15 @@
             <p class="card-text"><small class="text-muted">Last updated 2 minutes ago</small></p>
         </div>
     </div>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-dark" href="#">ShowSeek.com</a>
+        </div>
+    </footer>
 
 </body>
 
