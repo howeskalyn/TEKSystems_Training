@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <!-- using external js -->
+    <script src="index.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="images/LogoFINAL.png" alt="Logo" style="height: 100px">
+            <h1>ShowSeek</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-5 justify-content-end" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/front_page.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="show_page.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user_login.html">Profile</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Events or artists...">
+                    <button class="btn btn-dark" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User Log-In Form -->
+    <form action="user_login.html" method="get" style="margin: 20px">
+        <form>
+            <div class="row">
+                <div class="col-sm-8 col-md-6 col-lg-4">
+                    <div class="mb-3">
+                        <label for="user">Username:</label>
+                        <input required type="text" name="user" class="form-control" id="user" aria-describedby="user"
+                            placeholder="Enter username">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-6 col-lg-4">
+                <div class="mb-3">
+                    <label for="exampleInputPassword1">Password:</label>
+                    <input required type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Password">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-dark px-5 mt-3">Submit</button>
+            <!-- event handling & window object example -->
+            <button type="submit" class="btn btn-dark px-5 mt-3" onclick="showAlert()">Click for an insult</button>
+        </form>
+    </form>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+        <div class="text-center text-dark p-3 mt-5" style="background-color: rgba(0, 0, 0, 0.2);">
+            <iframe src="https://giphy.com/embed/xUA7aSW7VHZ2NwXV8A" width="400" height="100" class="giphy-embed"
+                allowFullScreen>
+            </iframe>
+            <p>
+                <a href="https://giphy.com/gifs/youngwolfhatchlings-run-young-wolf-hatchlings-xUA7aSW7VHZ2NwXV8A"></a>
+            </p>
+            © 2022 Copyright:
+            <a class="text-dark" href="/front_page.html">ShowSeek.com</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

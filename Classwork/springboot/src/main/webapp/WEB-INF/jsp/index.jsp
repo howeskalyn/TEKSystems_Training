@@ -18,17 +18,15 @@
         <h1>Hello ${name}</h1>
 
         <form method="get" action="/">
-            Search: <input type="text" name="search" value="${search}">
+            Course Name: <input type="text" name="courseName" value="${courseNameKey}">
+            <br>
+            Instructor Name: <input type="text" name="instructorName" value="${instructorNameKey}" style="margin:10px;">
             <button type="submit">Search</button>
 
-            <br style="margin: 10px;">
-
-            Search by Instructor: <input type="text" name="instructor" value="${instructor}">
-            <button type="submit">Search</button>
         </form>
 
         <!-- put in table for UI purposes -->
-        <h2>Courses by Name</h2>
+        <h2>Courses</h2>
         <table border="1" cellpadding="5">
             <th style="text-align: left;">ID</th>
             <th style="text-align: left;">Name</th>
@@ -42,7 +40,7 @@
             </c:forEach>
         </table>
 
-        <h2>Courses by Instructor</h2>
+        <!-- <h2>Courses by Instructor</h2>
         <table border="1" cellpadding="5">
             <th style="text-align: left;">ID</th>
             <th style="text-align: left;">Name</th>
@@ -54,7 +52,7 @@
                     <td>${icourse.instructor}</td>
                 </tr>
             </c:forEach>
-        </table>
+        </table> -->
 
     </body>
 

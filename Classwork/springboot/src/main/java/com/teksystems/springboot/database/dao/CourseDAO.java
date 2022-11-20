@@ -20,5 +20,11 @@ public interface CourseDAO extends JpaRepository<Course, Long> {
 	
 	public List<Course> findByInstructorContainingIgnoreCase(String name);
 	
+//	@Query("select c from Course c where c.name like %:name% or c.instructor like %:instructor")
+//	public List<Course> findByNameOrInstructor(String name, String instructor);
+	
+	// Eric's
+	public List<Course> findByNameOrInstructor(String name, String instructor);
+	
 
 }

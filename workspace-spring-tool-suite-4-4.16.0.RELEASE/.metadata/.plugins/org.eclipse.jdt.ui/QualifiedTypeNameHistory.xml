@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Statement"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="com.test.hib.model.User"/>
@@ -42,8 +41,6 @@
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
-    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
-    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="jpa.dao.CourseService"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.teksystems.springboot.database.entity.Course"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.common.util.impl.Log"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 </qualifiedTypeNameHistroy>
