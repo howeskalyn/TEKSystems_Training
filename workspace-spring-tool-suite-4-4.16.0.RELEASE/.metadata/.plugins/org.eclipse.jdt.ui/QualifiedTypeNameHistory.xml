@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Statement"/>
-    <fullyQualifiedTypeName name="java.sql.Statement"/>
-    <fullyQualifiedTypeName name="com.test.hib.model.User"/>
-    <fullyQualifiedTypeName name="com.perscholas.model.Department"/>
-    <fullyQualifiedTypeName name="com.perscholas.model.Teacher"/>
-    <fullyQualifiedTypeName name="com.test.controller.FindOrder"/>
-    <fullyQualifiedTypeName name="com.test.controller.FindOrderDetail"/>
-    <fullyQualifiedTypeName name="lombok.Setter"/>
-    <fullyQualifiedTypeName name="lombok.Getter"/>
-    <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxCrud.Order"/>
-    <fullyQualifiedTypeName name="com.test.model.Order"/>
-    <fullyQualifiedTypeName name="com.test.model.OrderDetail"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
-    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="com.test.controller.CustomerDAO"/>
     <fullyQualifiedTypeName name="com.test.model.Customer"/>
     <fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
@@ -33,13 +19,10 @@
     <fullyQualifiedTypeName name="school.database.model.Course"/>
     <fullyQualifiedTypeName name="school.database.model.Department"/>
     <fullyQualifiedTypeName name="school.database.controller.CourseDAO"/>
-    <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
     <fullyQualifiedTypeName name="jpa.entitymodels.Student_Course"/>
     <fullyQualifiedTypeName name="javax.persistence.JoinTable"/>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
-    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -51,7 +34,6 @@
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.io.Console"/>
     <fullyQualifiedTypeName name="jpa.entitymodels.Student"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="com.teksystems.springboot.database.dao.CourseDAO"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
@@ -60,4 +42,22 @@
     <fullyQualifiedTypeName name="org.hibernate.annotations.common.util.impl.Log"/>
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="com.teksystems.springboot.database.entity.Student"/>
+    <fullyQualifiedTypeName name="com.teksystems.springboot.database.dao.StudentDAO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.dao.UserDAO"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.entity.User"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.dao.FriendDAO"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.entity.Friend"/>
+    <fullyQualifiedTypeName name="antlr.debug.Event"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.entity.Event"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.entity.Ticket_Purchase"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="lombok.ToString.Exclude"/>
 </qualifiedTypeNameHistroy>

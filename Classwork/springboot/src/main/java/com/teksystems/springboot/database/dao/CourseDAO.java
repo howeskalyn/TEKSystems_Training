@@ -26,5 +26,7 @@ public interface CourseDAO extends JpaRepository<Course, Long> {
 	// Eric's
 	public List<Course> findByNameOrInstructor(String name, String instructor);
 	
+	public Course findById(Integer id);
+	
 
 }

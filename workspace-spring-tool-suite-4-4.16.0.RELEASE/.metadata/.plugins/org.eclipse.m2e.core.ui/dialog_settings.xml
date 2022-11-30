@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/Users/kalynhowes/Desktop/TEKSystems_Training/workspace-spring-tool-suite-4-4.16.0.RELEASE/school-database"/>
 			<item value="/Users/kalynhowes/Documents/workspace-spring-tool-suite-4-4.16.0.RELEASE/classicmodelsDemo/src/main/java/com/test/controller/OrderDAO.java"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -26,6 +27,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.Capstone.ShowSeek"/>
 			<item value="com.sba.SMS"/>
 			<item value="com.test.project.school_database"/>
 			<item value="com.test.project.classicmodelsDemo"/>
@@ -35,12 +37,14 @@
 			<item value="com.test.project.HibernateJPABeginner"/>
 		</list>
 		<list key="groupId">
+			<item value="com.Capstone"/>
 			<item value="com.sba"/>
 			<item value="com.test.project"/>
 			<item value="com.perscholas"/>
 			<item value="HibernateLab3"/>
 		</list>
 		<list key="artifactId">
+			<item value="ShowSeek"/>
 			<item value="SMS"/>
 			<item value="school-database"/>
 			<item value="classicmodelsDemo"/>
@@ -86,6 +90,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/kalynhowes/Desktop/TEKSystems_Training/Capstone/ShowSeek"/>
 			<item value="/Users/kalynhowes/Desktop/TEKSystems_Training/Classwork/springboot"/>
 		</list>
 		<list key="projectNameTemplate">

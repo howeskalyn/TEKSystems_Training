@@ -10,11 +10,16 @@ import com.capstone.ShowSeek.db.entity.Event;
 
 @Repository
 public interface Ticket_PurchaseDAO extends JpaRepository<Ticket_Purchase, Long> {
-	
+
 	@Query("select t from Ticket_Purchase t where t.event_id = :eventID")
 	public List<Ticket_Purchase> findByEventId(Integer eventID);
-	
+
+	// return event from ticket purchase table
 	@Query("select e from Event e where e.id = :eventID")
-	public List<Event> findEventByEventId(Integer eventID);
+	public Event findEventByEventId(Integer eventID);
+
+	// return from user_id
+	@Query("select t from Ticket_Purchase t where t.id = :userID")
+	public List<Ticket_Purchase> findByUserId(Integer userID);
 
 }
