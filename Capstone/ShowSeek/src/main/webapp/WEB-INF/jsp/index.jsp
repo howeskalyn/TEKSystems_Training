@@ -15,7 +15,7 @@
 
         <!-- testing User table -->
         <!-- <div style="border: solid; padding: 20px;">
-            <form method="get" action="/">
+            <form method="get" action="/table/test">
                 User Email: <input type="text" name="email" value="${email}">
                 <button type="submit">Search</button>
             </form>
@@ -42,7 +42,7 @@
 
         <!-- testing return Event from User table -->
         <div style="border: solid; padding: 20px;">
-            <form method="get" action="/">
+            <form method="get" action="/table/test">
                 User Email: <input type="text" name="email" value="${email}">
                 <button type="submit">Search</button>
             </form>

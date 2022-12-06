@@ -36,9 +36,42 @@ public class IndexController {
 	@Autowired
 	private Ticket_PurchaseDAO ticket_purchaseDAO;
 
-	// Testing connection to User Table
+	// Home Page Display
 	@RequestMapping(value = { "/", "/index", "/index.html" }, method = RequestMethod.GET)
-	public ModelAndView slash(@RequestParam(required = false) String email) {
+	public ModelAndView homePage() {
+
+		// set up
+		ModelAndView response = new ModelAndView();
+		response.setViewName("home_page"); // jsp file name
+
+		return response;
+	}
+
+	// Events Page Display
+	@RequestMapping(value = "/events", method = RequestMethod.GET)
+	public ModelAndView eventsPage() {
+
+		// set up
+		ModelAndView response = new ModelAndView();
+		response.setViewName("events_page"); // jsp file name
+
+		return response;
+	}
+
+	// User Login Page Display
+//	@RequestMapping(value = "/profile", method = RequestMethod.GET)
+//	public ModelAndView profilePage() {
+//
+//		// set up
+//		ModelAndView response = new ModelAndView();
+//		response.setViewName("profile_page"); // jsp file name
+//
+//		return response;
+//	}
+
+	// Testing connection to User Table
+	@RequestMapping(value = "/table/test", method = RequestMethod.GET)
+	public ModelAndView test(@RequestParam(required = false) String email) {
 
 		// set up
 		ModelAndView response = new ModelAndView();
@@ -53,11 +86,10 @@ public class IndexController {
 
 		// send found users back to web page
 		// response.addObject("user", user);
-		
+
 		List<Event> userEvents = eventDAO.findEventByUserEmail(email);
 		response.addObject("userEvents", userEvents);
-		
-		 
+
 		return response;
 	}
 
@@ -149,7 +181,7 @@ public class IndexController {
 
 		return response;
 	}
-	
+
 	// example from class
 //	@RequestMapping(value = { "/event/count" }, method = RequestMethod.GET)
 //	public ModelAndView eventCount() {
