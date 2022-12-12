@@ -49,6 +49,9 @@ public class Event {
 
 	@Column(name = "artist")
 	private String artist;
+	
+	@Column(name = "image")
+	private String image;
 
 	// one event can have many ticket purchases
 	@ToString.Exclude

@@ -24,9 +24,9 @@ public class CreateUserForm {
 	@Length(max = 45, message = "Last name must be less than 45 characters.")
 	private String lastName;
 	
+	@EmailUnique(message = "A user with this email already exists.")
 	@NotEmpty(message = "Email is required.")
 	@Length(max = 100, message = "Email must be less than 100 characters.")
-	@EmailUnique(message = "A user with this email already exists.")
 	private String email;
 	
 	@NotEmpty(message = "Password is required.")
@@ -36,6 +36,7 @@ public class CreateUserForm {
 	private String confirmPassword;
 	
 	@Length(max = 10, message = "Phone must be less than 10 characters.")
+//	@Unique(message = "A user with this phone number already exists.")
 	private String phone;
 	
 	//@Pattern(regexp = "(^\\d{5}$)|(^\\d{9}$)|(^\\d{5}-\\d{4}$)", message = "Zip Code format is incorrect.") // regex validation in spring bean

@@ -4,9 +4,6 @@
         <iframe src="https://giphy.com/embed/xUA7aSW7VHZ2NwXV8A" width="400" height="100" class="giphy-embed"
             allowFullScreen>
         </iframe>
-        <p>
-            <a href="https://giphy.com/gifs/youngwolfhatchlings-run-young-wolf-hatchlings-xUA7aSW7VHZ2NwXV8A"></a>
-        </p>
         <p>&#169 2022 Copyright:
             <a class="text-dark" href="/front_page.html">ShowSeek.com</a>
         </p>

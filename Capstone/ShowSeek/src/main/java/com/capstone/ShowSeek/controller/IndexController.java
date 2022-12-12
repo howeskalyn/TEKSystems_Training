@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -47,51 +49,109 @@ public class IndexController {
 		return response;
 	}
 
-	// Events Page Display
+	// Events Page Display (ordered by Date default)
 	@RequestMapping(value = "/events", method = RequestMethod.GET)
 	public ModelAndView eventsPage() {
 
 		// set up
 		ModelAndView response = new ModelAndView();
-		response.setViewName("events_page"); // jsp file name
+		response.setViewName("event_pages/events_page"); // jsp file name
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String email = auth.getName(); // get logged in username -> which is the email in my case
+
+		User user = userDAO.findByEmail(email); // pull from db
+		response.addObject("user", user); // send to jsp
+		
+		List<Event> events = eventDAO.findEventsOrderByDate();
+		response.addObject("events", events);
 
 		return response;
 	}
 
-	// User Login Page Display
-//	@RequestMapping(value = "/profile", method = RequestMethod.GET)
-//	public ModelAndView profilePage() {
-//
-//		// set up
-//		ModelAndView response = new ModelAndView();
-//		response.setViewName("profile_page"); // jsp file name
-//
-//		return response;
-//	}
-
-	// Testing connection to User Table
-	@RequestMapping(value = "/table/test", method = RequestMethod.GET)
-	public ModelAndView test(@RequestParam(required = false) String email) {
+	// Events Page Display (ordered by Price)
+	@RequestMapping(value = "/eventsprice", method = RequestMethod.GET)
+	public ModelAndView eventsPricePage() {
 
 		// set up
 		ModelAndView response = new ModelAndView();
-		response.setViewName("index"); // file name: index.jsp
+		response.setViewName("event_pages/events_page_price"); // jsp file name
 
-		// show input from web page
-		log.info("User Search Email: " + email);
-		response.addObject("email", email);
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String email = auth.getName(); // get logged in username -> which is the email in my case
 
-		// pull from the db based on input
-		// User user = userDAO.findByEmail(email);
-
-		// send found users back to web page
-		// response.addObject("user", user);
-
-		List<Event> userEvents = eventDAO.findEventByUserEmail(email);
-		response.addObject("userEvents", userEvents);
+		User user = userDAO.findByEmail(email); // pull from db
+		response.addObject("user", user); // send to jsp
+		
+		List<Event> events = eventDAO.findEventsOrderByPrice();
+		response.addObject("events", events);
 
 		return response;
 	}
+
+	// Events Page Display (ordered by Artist)
+	@RequestMapping(value = "/eventsartist", method = RequestMethod.GET)
+	public ModelAndView eventsArtistPage() {
+
+		// set up
+		ModelAndView response = new ModelAndView();
+		response.setViewName("event_pages/events_page_artist"); // jsp file name
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String email = auth.getName(); // get logged in username -> which is the email in my case
+
+		User user = userDAO.findByEmail(email); // pull from db
+		response.addObject("user", user); // send to jsp
+		
+		List<Event> events = eventDAO.findEventsOrderByArtist();
+		response.addObject("events", events);
+
+		return response;
+	}
+
+	// Events Page Display (ordered by Venue)
+	@RequestMapping(value = "/eventsvenue", method = RequestMethod.GET)
+	public ModelAndView eventsVenuePage() {
+
+		// set up
+		ModelAndView response = new ModelAndView();
+		response.setViewName("event_pages/events_page_venue"); // jsp file name
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String email = auth.getName(); // get logged in username -> which is the email in my case
+
+		User user = userDAO.findByEmail(email); // pull from db
+		response.addObject("user", user); // send to jsp
+		
+		List<Event> events = eventDAO.findEventsOrderByVenue();
+		response.addObject("events", events);
+
+		return response;
+	}
+
+	// Testing connection to User Table
+//	@RequestMapping(value = "/table/test", method = RequestMethod.GET)
+//	public ModelAndView test(@RequestParam(required = false) String email) {
+//
+//		// set up
+//		ModelAndView response = new ModelAndView();
+//		response.setViewName("index"); // file name: index.jsp
+//
+//		// show input from web page
+//		log.info("User Search Email: " + email);
+//		response.addObject("email", email);
+//
+//		// pull from the db based on input
+//		// User user = userDAO.findByEmail(email);
+//
+//		// send found users back to web page
+//		// response.addObject("user", user);
+//
+//		List<Event> userEvents = eventDAO.findEventByUserEmail(email);
+//		response.addObject("userEvents", userEvents);
+//
+//		return response;
+//	}
 
 //	@RequestMapping(value = { "/search" }, method = RequestMethod.GET)
 //	public ModelAndView search() {
@@ -101,86 +161,86 @@ public class IndexController {
 //	}
 
 	// Testing connection to Friend Table
-	@RequestMapping(value = { "/friend" }, method = RequestMethod.GET)
-	public ModelAndView slashFriend(@RequestParam(required = false) Integer id) {
-		// log.info("Index Controller /FRIEND");
-
-		// set up
-		ModelAndView response = new ModelAndView();
-		response.setViewName("index"); // file name: index.jsp
-
-		// show input from web page
-		log.info("Friend Search ID: " + id);
-		response.addObject("id", id);
-
-		// pull from the db based on input
-		Friend friend = friendDAO.findById(id);
-
-		// print to console for checking purposes
-		// log.info("User id: " + friend.getUser_id() + " & Friend id: " +
-		// friend.getFriend_id());
-
-		// send found users back to web page
-		response.addObject("friend", friend);
-		return response;
-	}
+//	@RequestMapping(value = { "/friend" }, method = RequestMethod.GET)
+//	public ModelAndView slashFriend(@RequestParam(required = false) Integer id) {
+//		// log.info("Index Controller /FRIEND");
+//
+//		// set up
+//		ModelAndView response = new ModelAndView();
+//		response.setViewName("index"); // file name: index.jsp
+//
+//		// show input from web page
+//		log.info("Friend Search ID: " + id);
+//		response.addObject("id", id);
+//
+//		// pull from the db based on input
+//		Friend friend = friendDAO.findById(id);
+//
+//		// print to console for checking purposes
+//		// log.info("User id: " + friend.getUser_id() + " & Friend id: " +
+//		// friend.getFriend_id());
+//
+//		// send found users back to web page
+//		response.addObject("friend", friend);
+//		return response;
+//	}
 
 	// Testing connection to Events Table
-	@RequestMapping(value = { "/event" }, method = RequestMethod.GET)
-	public ModelAndView slashEvent(@RequestParam(required = false) String venue) {
-		// log.info("Index Controller /EVENT");
-
-		// set up
-		ModelAndView response = new ModelAndView();
-		response.setViewName("index"); // file name: index.jsp
-
-		// show input from web page
-		// log.info("Event Search Venue: " + venue);
-		response.addObject("venue", venue);
-
-		// pull from the db based on input
-		List<Event> events = eventDAO.findByVenue(venue);
-
-		// print to console for checking purposes
-		// for (Event e : events) {
-		// log.info(e.getId() + ": " + e.getArtist() + " " + e.getDate());
-		// }
-
-		// send found users back to web page
-		response.addObject("events", events);
-		return response;
-	}
+//	@RequestMapping(value = { "/event" }, method = RequestMethod.GET)
+//	public ModelAndView slashEvent(@RequestParam(required = false) String venue) {
+//		// log.info("Index Controller /EVENT");
+//
+//		// set up
+//		ModelAndView response = new ModelAndView();
+//		response.setViewName("index"); // file name: index.jsp
+//
+//		// show input from web page
+//		// log.info("Event Search Venue: " + venue);
+//		response.addObject("venue", venue);
+//
+//		// pull from the db based on input
+//		List<Event> events = eventDAO.findByVenue(venue);
+//
+//		// print to console for checking purposes
+//		// for (Event e : events) {
+//		// log.info(e.getId() + ": " + e.getArtist() + " " + e.getDate());
+//		// }
+//
+//		// send found users back to web page
+//		response.addObject("events", events);
+//		return response;
+//	}
 
 	// Testing connection to Ticket_Purchase Table
-	@RequestMapping(value = { "/ticket" }, method = RequestMethod.GET)
-	public ModelAndView slashTicket(@RequestParam(required = false) Integer eventID) {
-		// log.info("Index Controller /TICKET");
-
-		// set up
-		ModelAndView response = new ModelAndView();
-		response.setViewName("index"); // file name: index.jsp
-
-		// show input from web page
-		// log.info("Ticket Search eventID: " + eventID);
-		response.addObject("eventID", eventID);
-
-		// pull from the db based on input
-//		List<Ticket_Purchase> tickets = ticket_purhaseDAO.findByEventId(eventID);
-
-		// print to console for checking purposes
-		// for (Ticket_Purchase t : tickets) {
-		// log.info(t.getId());
-		// }
-
-		// send found users back to web page
-//		response.addObject("tickets", tickets);
-
-		// TEST MAPPING: Return an event through a ticket_purchase
-		Event event2 = ticket_purchaseDAO.findEventByEventId(eventID);
-		response.addObject("event2", event2);
-
-		return response;
-	}
+//	@RequestMapping(value = { "/ticket" }, method = RequestMethod.GET)
+//	public ModelAndView slashTicket(@RequestParam(required = false) Integer eventID) {
+//		// log.info("Index Controller /TICKET");
+//
+//		// set up
+//		ModelAndView response = new ModelAndView();
+//		response.setViewName("index"); // file name: index.jsp
+//
+//		// show input from web page
+//		// log.info("Ticket Search eventID: " + eventID);
+//		response.addObject("eventID", eventID);
+//
+//		// pull from the db based on input
+////		List<Ticket_Purchase> tickets = ticket_purhaseDAO.findByEventId(eventID);
+//
+//		// print to console for checking purposes
+//		// for (Ticket_Purchase t : tickets) {
+//		// log.info(t.getId());
+//		// }
+//
+//		// send found users back to web page
+////		response.addObject("tickets", tickets);
+//
+//		// TEST MAPPING: Return an event through a ticket_purchase
+//		Event event2 = ticket_purchaseDAO.findEventByEventId(eventID);
+//		response.addObject("event2", event2);
+//
+//		return response;
+//	}
 
 	// example from class
 //	@RequestMapping(value = { "/event/count" }, method = RequestMethod.GET)

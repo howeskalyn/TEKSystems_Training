@@ -1,28 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
-    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
-    <fullyQualifiedTypeName name="com.test.controller.CustomerDAO"/>
-    <fullyQualifiedTypeName name="com.test.model.Customer"/>
-    <fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
-    <fullyQualifiedTypeName name="com.test.model.Employee"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeAll"/>
-    <fullyQualifiedTypeName name="school.database.util.EmailValidation"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
-    <fullyQualifiedTypeName name="org.junit.Test"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.params.provider.ValueSource"/>
-    <fullyQualifiedTypeName name="lombok.EqualsAndHashCode"/>
-    <fullyQualifiedTypeName name="lombok.ToString"/>
-    <fullyQualifiedTypeName name="school.database.model.Student"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.params.ParameterizedTest"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.params.provider.CsvSource"/>
-    <fullyQualifiedTypeName name="school.database.model.Course"/>
-    <fullyQualifiedTypeName name="school.database.model.Department"/>
-    <fullyQualifiedTypeName name="school.database.controller.CourseDAO"/>
     <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
     <fullyQualifiedTypeName name="jpa.entitymodels.Student_Course"/>
     <fullyQualifiedTypeName name="javax.persistence.JoinTable"/>
-    <fullyQualifiedTypeName name="antlr.collections.List"/>
     <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -47,8 +27,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.dao.UserDAO"/>
-    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.entity.User"/>
     <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.dao.FriendDAO"/>
     <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.entity.Friend"/>
     <fullyQualifiedTypeName name="antlr.debug.Event"/>
@@ -60,4 +38,26 @@
     <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="lombok.ToString.Exclude"/>
+    <fullyQualifiedTypeName name="org.hibernate.mapping.Map"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.ToString"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.form.CreateUserForm"/>
+    <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="antlr.collections.List"/>
+    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter"/>
+    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.builders.HttpSecurity"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotEmpty"/>
+    <fullyQualifiedTypeName name="javax.validation.Valid"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.dao.UserDAO"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.security.SecurityProperties.User"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.validation.EmailUnique"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.entity.UserRole"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.dao.UserRoleDAO"/>
+    <fullyQualifiedTypeName name="com.capstone.ShowSeek.db.entity.User"/>
 </qualifiedTypeNameHistroy>

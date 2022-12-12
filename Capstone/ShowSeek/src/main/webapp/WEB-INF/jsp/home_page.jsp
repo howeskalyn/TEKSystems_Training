@@ -1,8 +1,8 @@
 <jsp:include page="include/header.jsp" />
 
 <!--Header Image -->
-<div class="card m-3 p-3 shadow">
-    <img class="card-img-top" src="pub/images/show_header.jpeg" alt="Image of Crowd">
+<div class="card m-3 p-3 shadow col-lg-10 mx-auto">
+    <img class="card-img-top" style="height: 20vw" src="pub/images/show_header.jpeg" alt="Image of Crowd">
     <div class="card-body">
         <h5 class="card-title">Events Near You </h5>
         <h4 class="card-text" style="margin-bottom: 20px;">Search for events by your favorite artists!</h4>
@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<!-- Event Cards -->
+<!-- Artist Cards -->
 <h2 style="color: black; margin: 20px;">Trending Artists</h2>
 <div class="row row-cols-1 row-cols-sm-3 g-3 ms-2">
     <div class="col">
