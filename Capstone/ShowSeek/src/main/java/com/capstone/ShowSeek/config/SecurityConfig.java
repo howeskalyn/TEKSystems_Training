@@ -21,7 +21,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.csrf().disable()
 	        .authorizeRequests()
 	        	// specifies all URLs that do not need authentication to view
-//	        	.antMatchers("/**").permitAll() // allow all URLs
 	        	.antMatchers("/events**", "/artists", "/pub/**", "/user/**", "/", "/index").permitAll()
 	        	// tells spring security that all URLs can only be accessed if the user is authenticated
 	        	// authentication only, no authorization (authorization implemented in the controller to limit by user role)
