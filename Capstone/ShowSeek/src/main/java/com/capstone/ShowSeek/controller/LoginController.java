@@ -37,18 +37,22 @@ public class LoginController {
 	// .loginPage
 	@RequestMapping(value = "/user/login", method = RequestMethod.GET)
 	public ModelAndView login() {
+		log.info("/user/login page accessed.");
+		
 		ModelAndView response = new ModelAndView();
 		response.setViewName("login");
+	
 		return response;
 	}
 
 	// just displays the form
 	@RequestMapping(value = "/user/createuser", method = RequestMethod.GET)
 	public ModelAndView createUser() {
+		log.info("/user/usercreate GET page accessed.");
+		
 		ModelAndView response = new ModelAndView();
 		response.setViewName("createUser_page");
 
-		log.info("This is in the GET method for create user");
 		return response;
 	}
 
@@ -56,16 +60,21 @@ public class LoginController {
 	// actually takes in data from the form
 	@RequestMapping(value = "/user/createuser", method = RequestMethod.POST)
 	public ModelAndView createUserSubmit(@Valid CreateUserForm form, BindingResult bindingResult) {
+		log.info("/user/createuser POST page accessed.");
+		
 		ModelAndView response = new ModelAndView();
 		response.setViewName("createUser_page");
-		log.info("This is in the POST method for create user");
 
-		log.info(form.toString());
+//		log.info(form.toString()); 
 
-		// logging validation errors on create user page (based on annotations in
-		// CreateUserForm)
+		// logging validation errors
 		for (ObjectError e : bindingResult.getAllErrors()) {
 			log.info(e.getObjectName() + " : " + e.getDefaultMessage());
+		}
+		
+		// validate password and confirm password
+		if (!form.getPassword().equals(form.getConfirmPassword())) {
+			bindingResult.rejectValue("password", "error.user", "Passwords do NOT match");
 		}
 
 		if (!bindingResult.hasErrors()) {

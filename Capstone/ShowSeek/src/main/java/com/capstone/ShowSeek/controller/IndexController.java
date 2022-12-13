@@ -15,6 +15,7 @@ public class IndexController {
 	// Home Page Display
 	@RequestMapping(value = { "/", "/index", "/index.html" }, method = RequestMethod.GET)
 	public ModelAndView homePage() {
+		log.info("/index page accessed.");
 
 		// set up
 		ModelAndView response = new ModelAndView();
