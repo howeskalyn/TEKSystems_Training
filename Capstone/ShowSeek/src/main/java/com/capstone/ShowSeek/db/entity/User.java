@@ -1,6 +1,8 @@
 package com.capstone.ShowSeek.db.entity;
 
 import java.util.List;
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -56,7 +58,6 @@ public class User {
 	@ToString.Exclude
 	@OneToMany(mappedBy = "user") 
     private List<Ticket_Purchase> userTicketPurchases;
-    
     
 
 }

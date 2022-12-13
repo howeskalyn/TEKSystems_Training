@@ -1,5 +1,7 @@
 package com.capstone.ShowSeek.db.entity;
 
+import java.util.Objects;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,7 +26,7 @@ import lombok.ToString;
 @Entity
 @Table(name = "ticket_purchase")
 public class Ticket_Purchase {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -48,5 +50,4 @@ public class Ticket_Purchase {
 	@ManyToOne (cascade = CascadeType.ALL)
     @JoinColumn(name="id", insertable=false, updatable=false) // in Event table
     private Event event;
-	
 }
