@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @PreAuthorize("hasAuthority('ADMIN')")
 public class AdminController {
 	
-	@RequestMapping(value = { "/admin/admintest" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/admin" }, method = RequestMethod.GET)
 	public ModelAndView login() { 
 		ModelAndView response = new ModelAndView();
 		response.setViewName("admin/admin");

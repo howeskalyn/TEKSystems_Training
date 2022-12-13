@@ -1,6 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <jsp:include page="../include/header.jsp" />
-
+    <jsp:include page="include/header.jsp" />
 
     <div class="row">
         <div class="col-sm-6">
@@ -50,7 +49,7 @@
                     </div>
 
                     <div class="col-md-8">
-                        <div class="card-body" style="margin-left: 0px;">
+                        <div class="card-body" style="margin-left: 0px; overflow-x:auto">
                             <h2 style="color: black; margin: 0px; margin-bottom: 20px;">Your Events</h2>
 
                             <table class="table table-dark table-striped table-hover" style="margin: 0px">
@@ -94,10 +93,29 @@
                         <img src="pub/images/friends.png" alt="Friends" style="height: 200px; margin-top: 20px;">
                     </div>
                     <div class="col-md-8">
-                        <div class="card-body" style="margin-left: 0px;">
+                        <div class="card-body" style="margin-left: 0px; overflow-x:auto">
                             <h2 style="color: black; margin: 0px; margin-bottom: 20px;">Your Friends</h2>
 
-                            friends go here :)
+                            <table class="table table-dark table-striped table-hover" style="margin: 0px">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th scope="col"><i class="fa-solid fa-person"></i></th>
+                                        <th scope="col"><i class="fa-solid fa-envelope"></i></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <c:forEach items="${userFriends}" var="userFriend">
+                                        <tr>
+                                            <td>${userFriend.first_name} ${userFriend.last_name}</td>
+                                            <td>${userFriend.email}</td>
+                                        </tr>
+                                    </c:forEach>
+                                </tbody>
+                            </table>
+
+                            <a href="/usersearch" class="nav-link">
+                                <span type="button" class="ms-1 d-none d-sm-inline btn btn-dark mt-3 text-white">Add
+                                    Friends</span>
 
                         </div>
                     </div>
@@ -107,4 +125,4 @@
 
     </div>
 
-    <jsp:include page="../include/footer.jsp" />
+    <jsp:include page="include/footer.jsp" />

@@ -11,7 +11,8 @@
                             id="menu">
 
                             <sec:authorize access="isAuthenticated()">
-                                <h2 style="margin-top: 20px; margin: 0px">Welcome ${user.first_name}</h2>
+                                <h2 style="margin-top: 10px; margin: 0px; padding-top: 10px;">Welcome ${user.first_name}
+                                </h2>
                                 <li class="nav-item">
                                     <a href="/" class="nav-link align-middle px-0">
                                         <span type="button"
@@ -22,7 +23,7 @@
                             </sec:authorize>
 
                             <sec:authorize access="!isAuthenticated()">
-                                <h2 style="margin-top: 10px; margin: 0px">Welcome Guest</h2>
+                                <h2 style="margin-top: 10px; margin: 0px; padding-top: 10px;">Welcome Guest</h2>
                             </sec:authorize>
 
                             <h4 style="margin-top: 20px; color: rgb(163, 157, 157)">Sort Events By: </h4>
@@ -71,8 +72,11 @@
                                             class="fa-solid fa-dollar-sign"></i> ${event.ticket_price}</p>
 
                                     <sec:authorize access="isAuthenticated()">
-                                        <button class="btn btn-dark mt-3" type="button" onclick="buyTickets()">Buy
-                                            Tickets</button>
+                                        <a href="/ticketpurchase" class="nav-link">
+                                            <span type="button"
+                                                class="ms-1 d-none d-sm-inline btn btn-dark mt-3 text-white">Buy
+                                                Tickets</span>
+                                        </a>
                                     </sec:authorize>
 
                                 </div>

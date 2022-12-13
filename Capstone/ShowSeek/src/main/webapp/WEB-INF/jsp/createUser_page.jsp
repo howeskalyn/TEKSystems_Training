@@ -87,7 +87,6 @@
         </div>
 
         <div>
-            <!-- this needs to redirect you to the login page -->
             <button type="submit" class="btn btn-dark">Submit</button>
         </div>
     </form>

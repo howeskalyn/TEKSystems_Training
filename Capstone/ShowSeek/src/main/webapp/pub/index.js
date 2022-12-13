@@ -23,9 +23,3 @@ function pages() {
 
     x.innerHTML = string;
 }
-
-// allows the user to buy tickets to the current event -> saves info in the database
-function buyTickets() {
-
-
-}

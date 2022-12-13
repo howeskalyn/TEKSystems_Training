@@ -17,9 +17,14 @@
             <!-- font awesome -->
             <script src="https://kit.fontawesome.com/e951204ff9.js" crossorigin="anonymous"></script>
 
+            <!-- Bootstrap -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
                 integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
                 crossorigin="anonymous">
+
+            <!-- JQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.1.js"
+                integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
             <style>
                 .btn {
@@ -49,6 +54,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/profile">Profile</a>
                             </li>
+                            <sec:authorize access="isAuthenticated()">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/usersearch">Add Friends</a>
+                                </li>
+                            </sec:authorize>
                             <sec:authorize access="isAuthenticated()">
                                 <li class=" nav-item">
                                     <a class="nav-link" href="/user/logout">Logout</a>

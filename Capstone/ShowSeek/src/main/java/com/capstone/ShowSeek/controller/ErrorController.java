@@ -28,6 +28,7 @@ public class ErrorController {
 		
 		return "error/404";
 	}
+}
 	
 //	@ExceptionHandler(Exception.class)
 //	public ModelAndView handleAllException(HttpServletRequest request, Exception ex) {
@@ -84,5 +85,3 @@ public class ErrorController {
 //		return result.toString();
 //	}
 	
-
-}

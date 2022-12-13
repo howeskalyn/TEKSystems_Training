@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.capstone.ShowSeek.db.entity.Event;
 import com.capstone.ShowSeek.db.entity.User;
 
 @Repository
@@ -16,4 +15,7 @@ public interface UserDAO extends JpaRepository<User, Long> {
 	public User findUserById(Integer id);
 
 	public User findByEmail(String email);
+	
+	@Query("select u from User u where u.first_name like %:inputName% or u.last_name like %:inputName%")
+	public List<User> findByFirstOrLastName(String inputName);
 }

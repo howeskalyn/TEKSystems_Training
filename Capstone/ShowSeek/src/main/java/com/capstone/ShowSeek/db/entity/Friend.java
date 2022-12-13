@@ -27,11 +27,11 @@ public class Friend {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "pk")
+	private Integer pk;
+
 	@Column(name = "id")
 	private Integer id;
-
-	@Column(name = "user_id")
-	private Integer user_id;
 	
 	@Column(name = "friend_id")
 	private Integer friend_id;
