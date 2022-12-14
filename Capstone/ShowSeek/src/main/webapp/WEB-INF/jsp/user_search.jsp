@@ -22,6 +22,10 @@
                             console.log(data);
                         }
                     });
+
+                    // alerts of friend added & reloads
+                    alert('Friend Added!');
+                    window.location.reload();
                 });
             }
         );

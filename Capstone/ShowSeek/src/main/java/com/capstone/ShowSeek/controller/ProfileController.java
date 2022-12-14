@@ -128,7 +128,7 @@ public class ProfileController {
 	@ResponseBody
 	@RequestMapping(value = { "/addfriendCall" }, method = RequestMethod.GET)
 	public String addfriendCall(@RequestParam String clickedValue) {
-		log.info("/addfriendCall page accessed." + clickedValue);
+		log.info("/addfriendCall page accessed: " + clickedValue);
 
 		Friend newFriend = new Friend();
 		User user = getLoggedInUser();
