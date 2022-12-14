@@ -1,3 +1,7 @@
+/*
+ * ShowSeek - Spring Security Configuration
+ */
+
 package com.capstone.ShowSeek.config;
 
 import org.springframework.context.annotation.Bean;

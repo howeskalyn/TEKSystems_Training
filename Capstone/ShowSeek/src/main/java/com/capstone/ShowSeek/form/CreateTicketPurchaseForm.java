@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Form
+ * for adding a ticket_puchase to the database.
+ */
+
 package com.capstone.ShowSeek.form;
 
 import lombok.Getter;

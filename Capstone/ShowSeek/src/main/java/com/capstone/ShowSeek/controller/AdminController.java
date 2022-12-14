@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Controller
+ * For admin accessible pages only.
+ */
+
 package com.capstone.ShowSeek.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -12,13 +17,12 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @PreAuthorize("hasAuthority('ADMIN')")
 public class AdminController {
-	
+
 	@RequestMapping(value = { "/admin" }, method = RequestMethod.GET)
-	public ModelAndView login() { 
+	public ModelAndView login() {
 		log.info("/admin page accessed.");
 		ModelAndView response = new ModelAndView();
 		response.setViewName("admin/admin");
-	
 
 		return response;
 	}

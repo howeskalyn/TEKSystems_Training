@@ -85,7 +85,5 @@
 
                     </c:forEach>
                 </div>
-
-                <!-- div ends from header files -->
             </div>
         </div>

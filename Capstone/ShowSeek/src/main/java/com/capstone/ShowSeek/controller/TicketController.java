@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Controller
+ * For ticket purchasing pages.
+ */
+
 package com.capstone.ShowSeek.controller;
 
 import java.util.List;
@@ -44,7 +49,6 @@ public class TicketController {
 		ModelAndView response = new ModelAndView();
 		response.setViewName("ticket_purchase_page");
 
-		// send all events into jsp
 		List<Event> events = eventDAO.findEventsOrderByArtist();
 		response.addObject("events", events);
 
@@ -60,7 +64,6 @@ public class TicketController {
 		ModelAndView response = new ModelAndView();
 		response.setViewName("ticket_purchase_page");
 
-		// send all events into jsp
 		List<Event> events = eventDAO.findEventsOrderByArtist();
 		response.addObject("events", events);
 

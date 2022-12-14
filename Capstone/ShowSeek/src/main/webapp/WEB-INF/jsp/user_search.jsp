@@ -1,12 +1,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <jsp:include page="include/header.jsp" />
 
-    <!-- Ajax -->
+    <!-- Ajax Usage -->
     <script>
         $(document).ready(
             function () {
                 $('button[type=button').click(function () {
-                    // $('input[type=hidden]').click(function () {
                     console.log("user clicked : " + this.value);
 
                     $.ajax({
@@ -33,6 +32,7 @@
             <div class="card shadow p-3 mb-5 bg-white rounded">
                 <h2 style="color: black;">Add Friends!</h2>
 
+                <!-- Search for User -->
                 <form action="/usersearch" method="get" style="margin: 20px">
 
                     <div class="row">
@@ -49,6 +49,7 @@
 
                 </form>
 
+                <!-- Add Friend -->
                 <form action="/usersearch" method="get" style="margin: 20px">
 
                     <table class="table table-dark table-striped table-hover" style="margin: 0px">

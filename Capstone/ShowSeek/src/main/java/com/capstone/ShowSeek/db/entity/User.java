@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Entity
+ * Matches with user table in database.
+ */
+
 package com.capstone.ShowSeek.db.entity;
 
 import java.util.List;
@@ -33,31 +38,30 @@ public class User {
 
 	@Column(name = "first_name")
 	private String first_name;
-	
+
 	@Column(name = "last_name")
 	private String last_name;
-	
+
 	@Column(name = "email")
 	private String email;
-	
+
 	@Column(name = "password")
 	private String password;
-	
+
 	@Column(name = "phone")
 	private String phone;
-	
+
 	@Column(name = "zip")
 	private Integer zip;
-	
+
 	// one user can have many friends
 	@ToString.Exclude
 	@OneToMany(mappedBy = "user") // variable name from other table
-    private List<Friend> friends;
-	
+	private List<Friend> friends;
+
 	// one user can have multiple ticket purchases
 	@ToString.Exclude
-	@OneToMany(mappedBy = "user") 
-    private List<Ticket_Purchase> userTicketPurchases;
-    
+	@OneToMany(mappedBy = "user")
+	private List<Ticket_Purchase> userTicketPurchases;
 
 }

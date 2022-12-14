@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Entity
+ * Matches with event table in database.
+ */
+
 package com.capstone.ShowSeek.db.entity;
 
 import java.util.List;
@@ -15,8 +20,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
-
 
 @Getter
 @Setter
@@ -49,7 +52,7 @@ public class Event {
 
 	@Column(name = "artist")
 	private String artist;
-	
+
 	@Column(name = "image")
 	private String image;
 

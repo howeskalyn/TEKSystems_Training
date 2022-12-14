@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Entity
+ * Matches with friend table in database.
+ */
+
 package com.capstone.ShowSeek.db.entity;
 
 import javax.persistence.CascadeType;

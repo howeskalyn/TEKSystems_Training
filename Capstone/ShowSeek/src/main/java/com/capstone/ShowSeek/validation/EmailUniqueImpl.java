@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Validation
+ * for adding a user to the database.
+ */
+
 package com.capstone.ShowSeek.validation;
 
 import javax.validation.ConstraintValidator;

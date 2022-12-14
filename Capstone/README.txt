@@ -12,6 +12,7 @@ Notes:
 •Logging has been implemented using Lombok. Logs are shown on the SpringBoot Console when each page is being accessed to keep a chronological	access memory.
 •Some read methods created for pulling data from the database are brute-force and will not operate well in large-level production in their current state. 
 •A Trello Board has been used during the process to keep track of to-do lists. It can be found here: https://trello.com/b/va4cMkbs/showseek-capstone
+•Search bar in navigation bar is NOT implemented. It is there for only looks at the moment.
 
 Future:
 Ideas I had that are out of scope at this time include:

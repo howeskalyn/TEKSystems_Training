@@ -1,6 +1,8 @@
 <jsp:include page="include/header.jsp" />
 
 <div class="row">
+
+    <!-- Login Form -->
     <div class="col-sm-6">
         <div class="card shadow p-3 mb-5 bg-white rounded">
             <div class="card-body">
@@ -27,6 +29,7 @@
         </div>
     </div>
 
+    <!-- Redirect to Create User -->
     <div class="col-sm-6">
         <div class="card shadow p-3 mb-5 bg-white rounded">
             <div class="card-body">

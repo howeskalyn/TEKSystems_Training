@@ -3,6 +3,8 @@
         <jsp:include page="include/header.jsp" />
 
         <div class="row">
+
+            <!-- User Info Card -->
             <div class="col-sm-6">
                 <div class="card shadow p-3 mb-5 bg-white rounded">
                     <div class="row no-gutters">
@@ -38,7 +40,7 @@
                 </div>
             </div>
 
-            <!-- another card -->
+            <!-- Fun Spotify Interactive Card -->
             <div class="col-sm-6">
                 <div class="card shadow p-3 mb-5 bg-white rounded">
                     <div class="embed-responsive embed-responsive-4by3">
@@ -54,7 +56,7 @@
                 </div>
             </div>
 
-            <!-- another card -->
+            <!-- User Events Card -->
             <div class="col-sm-6">
                 <div class="card shadow p-3 mb-5 bg-white rounded">
                     <div class="row no-gutters">
@@ -99,7 +101,7 @@
                 </div>
             </div>
 
-            <!-- another card -->
+            <!-- User Friends Card -->
             <div class="col-sm-6">
                 <div class="card shadow p-3 mb-5 bg-white rounded">
                     <div class="row no-gutters">

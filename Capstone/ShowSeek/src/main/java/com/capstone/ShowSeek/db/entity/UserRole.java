@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Entity
+ * Matches with user_roles table in database.
+ */
+
 package com.capstone.ShowSeek.db.entity;
 
 import javax.persistence.Column;
@@ -26,12 +31,11 @@ public class UserRole {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	
-	@Column(name="user_id")
-	private Integer userId;
-	
-	@Column(name="role_name")
-	private String roleName;
 
+	@Column(name = "user_id")
+	private Integer userId;
+
+	@Column(name = "role_name")
+	private String roleName;
 
 }

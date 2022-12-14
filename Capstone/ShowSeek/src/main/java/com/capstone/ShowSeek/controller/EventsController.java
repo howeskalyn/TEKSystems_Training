@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Controller
+ * For events, ordered 4 different ways.
+ */
+
 package com.capstone.ShowSeek.controller;
 
 import java.util.List;
@@ -20,96 +25,85 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Controller
 public class EventsController {
-	
+
 	@Autowired
 	private UserDAO userDAO;
 	@Autowired
 	private EventDAO eventDAO;
-	
-	
+
+	public User getLoggedInUser() {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String email = auth.getName(); // get logged in username -> which is the email in my case
+		User user = userDAO.findByEmail(email); // pull from db
+		return user;
+	}
+
 	// Events Page Display (ordered by Date default)
-		@RequestMapping(value = "/events", method = RequestMethod.GET)
-		public ModelAndView eventsPage() {
-			log.info("/events page accessed.");
+	@RequestMapping(value = "/events", method = RequestMethod.GET)
+	public ModelAndView eventsPage() {
+		log.info("/events page accessed.");
 
-			// set up
-			ModelAndView response = new ModelAndView();
-			response.setViewName("event_pages/events_page"); // jsp file name
+		ModelAndView response = new ModelAndView();
+		response.setViewName("events_page");
 
-			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-			String email = auth.getName(); // get logged in username -> which is the email in my case
+		User user = getLoggedInUser();
+		response.addObject("user", user);
 
-			User user = userDAO.findByEmail(email); // pull from db
-			response.addObject("user", user); // send to jsp
-			
-			List<Event> events = eventDAO.findEventsOrderByDate();
-			response.addObject("events", events);
+		List<Event> events = eventDAO.findEventsOrderByDate();
+		response.addObject("events", events);
 
-			return response;
-		}
+		return response;
+	}
 
-		// Events Page Display (ordered by Price)
-		@RequestMapping(value = "/eventsprice", method = RequestMethod.GET)
-		public ModelAndView eventsPricePage() {
-			log.info("/eventsprice page accessed.");
+	// Events Page Display (ordered by Price)
+	@RequestMapping(value = "/eventsprice", method = RequestMethod.GET)
+	public ModelAndView eventsPricePage() {
+		log.info("/eventsprice page accessed.");
 
-			// set up
-			ModelAndView response = new ModelAndView();
-			response.setViewName("event_pages/events_page_price"); // jsp file name
+		ModelAndView response = new ModelAndView();
+		response.setViewName("events_page");
 
-			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-			String email = auth.getName(); // get logged in username -> which is the email in my case
+		User user = getLoggedInUser();
+		response.addObject("user", user);
 
-			User user = userDAO.findByEmail(email); // pull from db
-			response.addObject("user", user); // send to jsp
-			
-			List<Event> events = eventDAO.findEventsOrderByPrice();
-			response.addObject("events", events);
+		List<Event> events = eventDAO.findEventsOrderByPrice();
+		response.addObject("events", events);
 
-			return response;
-		}
+		return response;
+	}
 
-		// Events Page Display (ordered by Artist)
-		@RequestMapping(value = "/eventsartist", method = RequestMethod.GET)
-		public ModelAndView eventsArtistPage() {
-			log.info("/eventsartist page accessed.");
+	// Events Page Display (ordered by Artist)
+	@RequestMapping(value = "/eventsartist", method = RequestMethod.GET)
+	public ModelAndView eventsArtistPage() {
+		log.info("/eventsartist page accessed.");
 
-			// set up
-			ModelAndView response = new ModelAndView();
-			response.setViewName("event_pages/events_page_artist"); // jsp file name
+		ModelAndView response = new ModelAndView();
+		response.setViewName("events_page");
 
-			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-			String email = auth.getName(); // get logged in username -> which is the email in my case
+		User user = getLoggedInUser();
+		response.addObject("user", user);
 
-			User user = userDAO.findByEmail(email); // pull from db
-			response.addObject("user", user); // send to jsp
-			
-			List<Event> events = eventDAO.findEventsOrderByArtist();
-			response.addObject("events", events);
+		List<Event> events = eventDAO.findEventsOrderByArtist();
+		response.addObject("events", events);
 
-			return response;
-		}
+		return response;
+	}
 
-		// Events Page Display (ordered by Venue)
-		@RequestMapping(value = "/eventsvenue", method = RequestMethod.GET)
-		public ModelAndView eventsVenuePage() {
-			log.info("/eventsvenue page accessed.");
+	// Events Page Display (ordered by Venue)
+	@RequestMapping(value = "/eventsvenue", method = RequestMethod.GET)
+	public ModelAndView eventsVenuePage() {
+		log.info("/eventsvenue page accessed.");
 
-			// set up
-			ModelAndView response = new ModelAndView();
-			response.setViewName("event_pages/events_page_venue"); // jsp file name
+		ModelAndView response = new ModelAndView();
+		response.setViewName("events_page");
 
-			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-			String email = auth.getName(); // get logged in username -> which is the email in my case
+		User user = getLoggedInUser();
+		response.addObject("user", user);
 
-			User user = userDAO.findByEmail(email); // pull from db
-			response.addObject("user", user); // send to jsp
-			
-			List<Event> events = eventDAO.findEventsOrderByVenue();
-			response.addObject("events", events);
+		List<Event> events = eventDAO.findEventsOrderByVenue();
+		response.addObject("events", events);
 
-			return response;
-		}
-	
+		return response;
+	}
+
 }
-

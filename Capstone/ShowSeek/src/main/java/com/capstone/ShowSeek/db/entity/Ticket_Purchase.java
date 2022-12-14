@@ -1,6 +1,9 @@
-package com.capstone.ShowSeek.db.entity;
+/*
+ * ShowSeek - Entity
+ * Matches with ticket_purchase table in database.
+ */
 
-import java.util.Objects;
+package com.capstone.ShowSeek.db.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -31,23 +34,23 @@ public class Ticket_Purchase {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
-	
+
 	@Column(name = "event_id")
 	private Integer event_id;
-	
+
 	@Column(name = "user_id")
 	private Integer user_id;
-	
+
 	@Column(name = "quantity")
 	private Integer quantity;
-	
+
 	// each ticket purchase is linked to a single user
-	@ManyToOne (cascade = CascadeType.ALL)
-    @JoinColumn(name="id", insertable=false, updatable=false) // in User table
-    private User user;
-	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id", insertable = false, updatable = false) // in User table
+	private User user;
+
 	// each ticket purchase is linked to a single event
-	@ManyToOne (cascade = CascadeType.ALL)
-    @JoinColumn(name="id", insertable=false, updatable=false) // in Event table
-    private Event event;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id", insertable = false, updatable = false) // in Event table
+	private Event event;
 }

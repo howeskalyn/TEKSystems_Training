@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - DAO
+ * UserRole table usage.
+ */
+
 package com.capstone.ShowSeek.db.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,8 +15,6 @@ import java.util.List;
 @Repository
 public interface UserRoleDAO extends JpaRepository<UserRole, Long> {
 
-
 	public List<UserRole> findByUserId(Integer userId);
-	
-}
 
+}

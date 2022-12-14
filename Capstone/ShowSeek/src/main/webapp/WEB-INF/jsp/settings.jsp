@@ -2,6 +2,8 @@
     <jsp:include page="include/header.jsp" />
 
     <div class="row">
+
+        <!-- Change Password Card -->
         <div class="col-md-8 mx-auto">
             <div class="card shadow p-3 mb-5 bg-white rounded">
                 <h2 style="color: black"> Settings for ${user.first_name} ${user.last_name} </h2>

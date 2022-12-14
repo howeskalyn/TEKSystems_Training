@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - DAO
+ * Friend table usage.
+ */
+
 package com.capstone.ShowSeek.db.dao;
 
 import java.util.List;

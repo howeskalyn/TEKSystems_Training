@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Controller
+ * For login and user creation pages.
+ */
+
 package com.capstone.ShowSeek.controller;
 
 import javax.validation.Valid;
@@ -38,10 +43,10 @@ public class LoginController {
 	@RequestMapping(value = "/user/login", method = RequestMethod.GET)
 	public ModelAndView login() {
 		log.info("/user/login page accessed.");
-		
+
 		ModelAndView response = new ModelAndView();
 		response.setViewName("login");
-	
+
 		return response;
 	}
 
@@ -49,7 +54,7 @@ public class LoginController {
 	@RequestMapping(value = "/user/createuser", method = RequestMethod.GET)
 	public ModelAndView createUser() {
 		log.info("/user/usercreate GET page accessed.");
-		
+
 		ModelAndView response = new ModelAndView();
 		response.setViewName("createUser_page");
 
@@ -61,17 +66,17 @@ public class LoginController {
 	@RequestMapping(value = "/user/createuser", method = RequestMethod.POST)
 	public ModelAndView createUserSubmit(@Valid CreateUserForm form, BindingResult bindingResult) {
 		log.info("/user/createuser POST page accessed.");
-		
+
 		ModelAndView response = new ModelAndView();
 		response.setViewName("createUser_page");
 
-//		log.info(form.toString()); 
+		// log.info(form.toString());
 
 		// logging validation errors
 		for (ObjectError e : bindingResult.getAllErrors()) {
 			log.info(e.getObjectName() + " : " + e.getDefaultMessage());
 		}
-		
+
 		// validate password and confirm password
 		if (!form.getPassword().equals(form.getConfirmPassword())) {
 			bindingResult.rejectValue("password", "error.user", "Passwords do NOT match");
@@ -102,9 +107,9 @@ public class LoginController {
 		} else {
 			response.addObject("bindingResult", bindingResult);
 			response.addObject("form", form);
-		
+
 		}
-		
+
 		return response;
 	}
 

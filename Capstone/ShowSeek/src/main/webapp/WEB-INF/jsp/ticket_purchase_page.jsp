@@ -10,7 +10,6 @@
 
         <label for="eventID" class="form-label">Select Event</label>
         <select class="form-select" name="eventID" id="eventID" required>
-            <!-- <option selected>Select Event</option> -->
             <c:forEach items="${events}" var="event">
                 <option value="${event.id}">${event.artist} at ${event.venue}</option>
             </c:forEach>
@@ -40,6 +39,8 @@
             <button type="submit" class="ms-1 d-none d-sm-inline btn btn-dark mt-3 text-white">Submit</button>
         </div>
     </form>
+
+    <!-- Internal JS -->
     <script>
         function validateForm() {
             window.open("/completepurchase");

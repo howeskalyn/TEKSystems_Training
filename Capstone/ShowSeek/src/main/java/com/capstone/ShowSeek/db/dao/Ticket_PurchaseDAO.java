@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - DAO
+ * Ticket_Purchase table usage.
+ */
+
 package com.capstone.ShowSeek.db.dao;
 
 import java.util.List;

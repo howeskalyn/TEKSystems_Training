@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Testing
+ * JUnut testing a method in each DAO.
+ */
+
 package com.capstone.ShowSeek;
 
 import java.util.List;
@@ -17,7 +22,7 @@ import com.capstone.ShowSeek.db.entity.User;
 
 @SpringBootTest
 class ShowSeekApplicationTests {
-	
+
 	@Autowired
 	UserDAO userDAO;
 	@Autowired
@@ -33,26 +38,26 @@ class ShowSeekApplicationTests {
 		Assertions.assertTrue(u.getId().equals(1));
 		Assertions.assertFalse(u.getId().equals(2));
 	}
-	
+
 	@Test
 	void findEventByEventIdTest() {
 		Event e = tpDAO.findEventByEventId(2);
 		Assertions.assertTrue(e.getId().equals(2));
 		Assertions.assertFalse(e.getId().equals(3));
 	}
-	
+
 	@Test
-	void findByVenueTest () {
+	void findByVenueTest() {
 		List<Event> es = eventDAO.findByVenue("Capital One Arena");
 		Assertions.assertTrue(es.size() > 0);
 		Assertions.assertFalse(es.size() > 3);
 	}
-	
+
 	@Test
 	void findAllFriendsTest() {
 		List<Friend> friends = friendDAO.findAllFriends();
 		Assertions.assertTrue(friends.size() > 0);
 		Assertions.assertFalse(friends.size() == 0);
 	}
-	
+
 }

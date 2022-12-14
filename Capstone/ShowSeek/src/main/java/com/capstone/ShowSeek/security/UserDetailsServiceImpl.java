@@ -1,3 +1,8 @@
+/*
+ * ShowSeek - Service
+ * validation for adding a user role to the database.
+ */
+
 package com.capstone.ShowSeek.security;
 
 import java.util.ArrayList;
@@ -28,38 +33,39 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	@Autowired
 	private UserRoleDAO userRoleDao;
 
-	// this class is used by spring security to fetch the user from the database & create the user role
+	// this class is used by spring security to fetch the user from the database &
+	// create the user role
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		
+
 		User user = userDao.findByEmail(username);
-		
+
 		if (user == null) {
 			throw new UsernameNotFoundException("Username '" + username + "' not found in database");
 		}
-		
+
 		List<UserRole> userRoles = userRoleDao.findByUserId(user.getId());
-		
+
 		boolean accountIsEnabled = true;
 		boolean accountNonExpired = true;
 		boolean credentialsNonExpired = true;
 		boolean accountNonLocked = true;
-		
+
 		// setup user roles
 		Collection<? extends GrantedAuthority> springRoles = buildGrantAuthorities(userRoles);
-		
+
 		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
 				accountIsEnabled, accountNonExpired, credentialsNonExpired, accountNonLocked, springRoles);
 	}
 
 	private Collection<? extends GrantedAuthority> buildGrantAuthorities(List<UserRole> userRoles) {
-		
+
 		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-		
+
 		for (UserRole role : userRoles) {
 			authorities.add(new SimpleGrantedAuthority(role.getRoleName()));
 		}
-		
+
 		return authorities;
 	}
 }

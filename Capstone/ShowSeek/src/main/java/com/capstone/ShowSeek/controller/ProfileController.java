@@ -1,9 +1,13 @@
+/*
+ * ShowSeek - Controller
+ * For profile, adding friends, and user settings pages.
+ */
+
 package com.capstone.ShowSeek.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +17,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,15 +25,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.capstone.ShowSeek.db.dao.EventDAO;
 import com.capstone.ShowSeek.db.dao.FriendDAO;
-import com.capstone.ShowSeek.db.dao.Ticket_PurchaseDAO;
 import com.capstone.ShowSeek.db.dao.UserDAO;
 import com.capstone.ShowSeek.db.entity.Event;
 import com.capstone.ShowSeek.db.entity.Friend;
-import com.capstone.ShowSeek.db.entity.Ticket_Purchase;
 import com.capstone.ShowSeek.db.entity.User;
-import com.capstone.ShowSeek.db.entity.UserRole;
-import com.capstone.ShowSeek.form.CreateTicketPurchaseForm;
-import com.capstone.ShowSeek.form.CreateUserForm;
 import com.capstone.ShowSeek.form.UpdatePasswordForm;
 
 import lombok.extern.slf4j.Slf4j;
@@ -50,7 +48,7 @@ public class ProfileController {
 	private PasswordEncoder passwordEncoder;
 
 	// ---- HELPER FUNCTIONS ----
-	// finding a users friends
+	// finding a users friends manually
 	public List<User> findUsersFriends() {
 		User user = getLoggedInUser();
 
@@ -80,17 +78,18 @@ public class ProfileController {
 		return user;
 	}
 
-	// ---- REQUEST MAPPING ----
+	// ---- REQUEST MAPPINGS ----
+
 	// User Profile Home Page Display
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)
 	public ModelAndView profilePage() {
 		log.info("/profile page accessed.");
 
 		ModelAndView response = new ModelAndView();
-		response.setViewName("profile_home"); // jsp file name
+		response.setViewName("profile_home");
 
 		User user = getLoggedInUser();
-		response.addObject("user", user); // send to jsp
+		response.addObject("user", user);
 
 		List<Event> userEvents = eventDAO.findEventByUserEmail(user.getEmail());
 		response.addObject("userEvents", userEvents);
@@ -110,14 +109,15 @@ public class ProfileController {
 		ModelAndView response = new ModelAndView();
 		response.setViewName("user_search");
 
-//		log.info("Input Name: " + inputName);
+		// log.info("Input Name: " + inputName);
 		response.addObject("inputName", inputName);
 
-		// all users
-		List<User> users = userDAO.findByFirstOrLastName(inputName);
+		List<User> users = userDAO.findByFirstOrLastName(inputName); // all users
 
 		List<User> userFriends = findUsersFriends();
-		users.removeAll(userFriends); // only display users who are not friends with the current user already
+		userFriends.add(getLoggedInUser()); // add current user to userFriends so it will be excluded on the next line
+
+		users.removeAll(userFriends); // only display users who are not friends with (or ARE) the current user already
 
 		response.addObject("users", users);
 
@@ -136,7 +136,7 @@ public class ProfileController {
 		newFriend.setId(user.getId());
 		Integer friendID = Integer.parseInt(clickedValue);
 		newFriend.setFriend_id(friendID);
-//		log.info("New Friend: " + newFriend.toString());
+		// log.info("New Friend: " + newFriend.toString());
 
 		friendDAO.save(newFriend);
 
@@ -161,7 +161,7 @@ public class ProfileController {
 	@RequestMapping(value = "/settings", method = RequestMethod.POST)
 	public ModelAndView settings(@Valid UpdatePasswordForm form, BindingResult bindingResult) {
 		log.info("/settings POST page accessed.");
-		
+
 		ModelAndView response = new ModelAndView();
 		response.setViewName("settings");
 
