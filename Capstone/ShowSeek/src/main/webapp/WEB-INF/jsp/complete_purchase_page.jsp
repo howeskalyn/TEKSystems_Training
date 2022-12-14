@@ -1,7 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <jsp:include page="include/header.jsp" />
 
-    <!--Header Image -->
+    <!--Header -->
     <div class="card m-3 p-3 shadow col-lg-10 mx-auto">
         <img class="card-img-top" style="height: 20vw" src="pub/images/cheer.webp" alt="Cheering Crowd">
         <div class="card-img-overlay">
