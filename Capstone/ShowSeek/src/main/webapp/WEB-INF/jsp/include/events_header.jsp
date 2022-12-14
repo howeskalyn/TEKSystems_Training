@@ -14,7 +14,7 @@
                                 <h2 style="margin-top: 10px; margin: 0px; padding-top: 10px;">Welcome ${user.first_name}
                                 </h2>
                                 <li class="nav-item">
-                                    <a href="/" class="nav-link align-middle px-0">
+                                    <a href="/user/logout" class="nav-link align-middle px-0">
                                         <span type="button"
                                             class="ms-1 d-none d-sm-inline btn btn-dark mt-3 text-white">
                                             <i class="fa-solid fa-sign-out"></i> Logout</span>
