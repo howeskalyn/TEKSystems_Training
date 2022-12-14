@@ -38,7 +38,7 @@ Tools Used
 - Trello Board: https://trello.com/b/va4cMkbs/showseek-capstone
 - MySQL for DBMS
 
-![Alt text](/ShowSeek/DB_EER.png)
+![Alt text](ShowSeek/DB_EER.png)
 
 Deployment
 ==
